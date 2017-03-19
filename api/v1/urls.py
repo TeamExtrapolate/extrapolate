@@ -1,7 +1,7 @@
 from django.conf.urls import url
 
-from api.v1.views import StockView
+from .views import LoginView
 
 urlpatterns = [
-    url(r'^stocks/$', StockView.as_view(), name='stocks')
+    url(r'^login/$', LoginView.as_view(), name='login-v1'),
 ]

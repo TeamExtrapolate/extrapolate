@@ -36,8 +36,9 @@ INSTALLED_APPS = [
     'django.contrib.messages',
     'django.contrib.staticfiles',
     'rest_framework',
-    'rest_framework.authtoken',
+    'auth_token',
     'api',
+    'user',
 ]
 
 MIDDLEWARE = [
@@ -115,3 +116,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
+
+# MODELS
+
+AUTH_USER_MODEL = 'user.User'
