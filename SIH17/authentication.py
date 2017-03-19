@@ -4,5 +4,4 @@ from auth_token.models import AuthToken
 
 
 class CustomTokenAuthentication(TokenAuthentication):
-    keyword = 'AuthToken'
     model = AuthToken
