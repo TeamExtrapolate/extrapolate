@@ -1,3 +1,6 @@
+import os
+
+from django.http import HttpResponse
 from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
@@ -8,6 +11,7 @@ from rest_framework.views import APIView
 
 from SIH17.authentication import CustomTokenAuthentication
 from analysis.forms import AnalysisTestForm
+from analysis.script import execute
 from auth_token.models import AuthToken
 from .token_gen import token_gen
 
@@ -40,5 +44,12 @@ class TestLoginView(APIView):
 def analysis_post(request):
     f = AnalysisTestForm(request.POST, request.FILES)
     if f.is_valid():
-        f.save()
-    return JsonResponse(data={'status': 'Suceess'}, status=200)
+        obj = f.save()
+        path = execute(obj.test_file.name)
+        if os.path.exists(path):
+            with open(path, 'rb') as fh:
+                response = HttpResponse(fh.read(),
+                                        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
+                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                return response
+    return JsonResponse(data={'status': 'Success'}, status=200)

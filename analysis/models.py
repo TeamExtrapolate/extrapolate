@@ -10,7 +10,8 @@ from django.db import models
 def change_file_name(instance, filename):
     extension = filename.split('.')[-1]
     filename = '%s.%s' % (int(datetime.datetime.now().strftime("%s")) * 1000, extension)
-    return '/'.join(['media', 'analysis', filename])
+    path = 'media/analysis/'
+    return os.path.join(path, filename)
 
 
 class AnalysisTest(models.Model):
@@ -20,6 +21,7 @@ class AnalysisTest(models.Model):
         return os.path.basename(self.test_file.name)
 
     def clean(self):
-        mime = magic.from_buffer(self.test_file.read(), mime=True)
-        if mime != 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
-            raise ValidationError('Invalid file format')
+        if self.test_file:
+            mime = magic.from_buffer(self.test_file.read(), mime=True)
+            if mime != 'application/vnd.openxmlformats-officedocument.spreadsheetml.sheet':
+                raise ValidationError('Invalid file format')
