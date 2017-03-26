@@ -39,6 +39,7 @@ INSTALLED_APPS = [
     'auth_token',
     'api',
     'user',
+    'analysis'
 ]
 
 MIDDLEWARE = [
@@ -116,7 +117,7 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-
+MEDIA_URL = '/media/'
 # MODELS
 
 AUTH_USER_MODEL = 'user.User'
