@@ -35,7 +35,10 @@ class TestLoginView(APIView):
     authentication_classes = (CustomTokenAuthentication,)
     permission_classes = (IsAuthenticated,)
 
-    def post(self, request, *args, **kwargs):
+    def post(self, request):
+        f = AnalysisTestForm(request.POST, request.FILES)
+        print(f.is_valid())
+        # print(f.errors.values())
         return Response({"hello": 1})
 
 
