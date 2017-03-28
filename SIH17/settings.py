@@ -39,7 +39,8 @@ INSTALLED_APPS = [
     'auth_token',
     'api',
     'user',
-    'analysis'
+    'analysis',
+    'storages',
 ]
 
 MIDDLEWARE = [
@@ -117,7 +118,17 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-MEDIA_URL = '/media/'
-# MODELS
 
+MEDIA_URL = '/file-uploads/'
+
+# MODELS
 AUTH_USER_MODEL = 'user.User'
+
+DEFAULT_FILE_STORAGE = 'storages.backends.s3boto3.S3Boto3Storage'
+AWS_ACCESS_KEY_ID = 'AKIAJKTS7B7S7TLFNL2Q'
+AWS_SECRET_ACCESS_KEY = '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'
+AWS_STORAGE_BUCKET_NAME = 'sih17'
+AWS_HEADERS = {
+    'Expires': 'Thu, 15 Feb 2018 20:00:00 GMT',
+    'Cache-Control': 'max-age=86400',
+}
