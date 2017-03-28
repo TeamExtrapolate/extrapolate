@@ -48,7 +48,7 @@ def analysis_post(request):
     f = AnalysisTestForm(request.POST, request.FILES)
     if f.is_valid():
         obj = f.save()
-        path = execute(obj.test_file.name)
+        path = execute(obj.test_file.url)
         if os.path.exists(path):
             with open(path, 'rb') as fh:
                 response = HttpResponse(fh.read(),
