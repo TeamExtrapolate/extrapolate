@@ -55,4 +55,3 @@ def analysis_post(request):
                                         content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
-    return JsonResponse(data={'status': 'Success'}, status=200)
