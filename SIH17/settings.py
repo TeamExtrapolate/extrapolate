@@ -119,8 +119,6 @@ USE_TZ = True
 
 STATIC_URL = '/static/'
 
-MEDIA_URL = '/file-uploads/'
-
 # MODELS
 AUTH_USER_MODEL = 'user.User'
 
@@ -131,4 +129,33 @@ AWS_STORAGE_BUCKET_NAME = 'sih17'
 AWS_HEADERS = {
     'Expires': 'Thu, 15 Feb 2018 20:00:00 GMT',
     'Cache-Control': 'max-age=86400',
+}
+
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': '/Users/akshaysharma/Desktop/django-projects/sih17/logs/error.log',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
 }
