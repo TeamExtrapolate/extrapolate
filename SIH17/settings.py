@@ -142,6 +142,8 @@ AWS_HEADERS = {
 }
 FILE_UPLOAD_TEMP_DIR = '/temp/'
 
+S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/sih17/'
+
 # LOGGING = {
 #     'version': 1,
 #     'disable_existing_loggers': False,

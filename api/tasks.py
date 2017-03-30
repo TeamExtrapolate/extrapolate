@@ -1,16 +1,22 @@
-import boto3
+import os
+
 from celery import Celery
+from django.core.files import File
+
+from analysis.models import AnalysisTest
 
 app = Celery('tasks')
 
 
 @app.task(ignore_result=True)
-def upload_s3():
-    s3 = boto3.resource('s3', aws_access_key_id='AKIAJKTS7B7S7TLFNL2Q',
-                        aws_secret_access_key='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')
-    data = open('media/analysis-results/result-1490815666000.xlsx', 'rb')
-    a = s3.Bucket('sih17').put_object(Key='test.xlsx', Body=data)
-    print(a)
+def upload_s3(test_file, predicted_file):
+    test_temp = open(test_file, 'rb')
+    predicted_temp = open(predicted_file, 'rb')
+    a = AnalysisTest(test_file=File(test_temp), predicted_file=File(predicted_temp))
+    a.save()
+    print(test_file, predicted_file)
+    os.system('rm %s' % test_temp.name)
+    os.system('rm %s' % predicted_temp.name)
 
 
 @app.task

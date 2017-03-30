@@ -1,3 +1,4 @@
+import datetime
 import pickle
 
 import numpy as np
@@ -191,6 +192,8 @@ def testing(X, model, ds, file_name):
 def execute(file_path):
     test = pd.read_excel(file_path, na_values=-1)
     X, y = prepare(test)
-    filename = 'finalized_model.sav'
+    filename = 'analysis/IKDD_Dataset/finalized_model.sav'
     loaded_model = pickle.load(open(filename, 'rb'))
-    testing(X, loaded_model, test, 'result4.xlsx')
+    path = 'tmp/predictions/result-%s.xlsx' % (int(datetime.datetime.now().strftime("%s")) * 1000)
+    testing(X, loaded_model, test, path)
+    return path

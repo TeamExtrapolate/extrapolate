@@ -1,7 +1,7 @@
 import os
+import uuid
 
 from django.http import HttpResponse
-from django.http import JsonResponse
 from django.views.decorators.csrf import csrf_exempt
 from django.views.decorators.http import require_POST
 from rest_framework.authtoken.views import ObtainAuthToken
@@ -12,6 +12,7 @@ from rest_framework.views import APIView
 from SIH17.authentication import CustomTokenAuthentication
 from analysis.forms import AnalysisTestForm
 from analysis.script import execute
+from api.tasks import upload_s3
 from auth_token.models import AuthToken
 from .token_gen import token_gen
 
@@ -47,8 +48,13 @@ class TestLoginView(APIView):
 def analysis_post(request):
     f = AnalysisTestForm(request.POST, request.FILES)
     if f.is_valid():
-        obj = f.save()
-        path = execute(obj.test_file.url)
+        file = request.FILES['test_file']
+        old_path = 'tmp/tests/%s.xlsx' % uuid.uuid4()
+        with open(old_path, 'wb+') as destination:
+            for chunk in file.chunks():
+                destination.write(chunk)
+        path = execute(old_path)
+        upload_s3.apply_async([old_path, path], queue='uploads', routing_key='s3.uploads')
         if os.path.exists(path):
             with open(path, 'rb') as fh:
                 response = HttpResponse(fh.read(),
