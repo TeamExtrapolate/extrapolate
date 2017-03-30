@@ -168,7 +168,7 @@ def testing(X, model, ds, file_name):
     submission.to_excel(writer_orig, index=False, sheet_name='report')
     writer_orig.save()
 
-def execute(file_path)
+def execute(file_path):
     test  = pd.read_excel(file_path, na_values=-1)
     X, y = prepare(test)
     filename = 'finalized_model.sav'
