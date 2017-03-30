@@ -12,6 +12,8 @@ https://docs.djangoproject.com/en/1.10/ref/settings/
 
 import os
 
+from kombu import Queue, Exchange
+
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
 BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -23,6 +25,13 @@ SECRET_KEY = 'mrc937$)cvu%o^a9hcq*-_ookriis@qr!g1p)$&wd#2g2^@vxr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+
+CELERY_TASK_QUEUES = (
+    Queue('uploads', exchange=Exchange('uploads', type='direct'), routing_key='uploads.s3'),
+)
+BROKER_URL = 'amqp://guest:**@127.0.0.1:5672//'
+CELERY_ACCEPT_CONTENT = ['application/json']
+CELERY_TASK_SERIALIZER = 'json'
 
 ALLOWED_HOSTS = []
 
@@ -58,12 +67,13 @@ ROOT_URLCONF = 'SIH17.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
-        'APP_DIRS': True,
+        'DIRS': [os.path.join(BASE_DIR, 'templates/'), ],
+        'APP_DIRS': False,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
                 'django.template.context_processors.request',
+                'django.template.context_processors.csrf',
                 'django.contrib.auth.context_processors.auth',
                 'django.contrib.messages.context_processors.messages',
             ],
@@ -118,8 +128,10 @@ USE_TZ = True
 # https://docs.djangoproject.com/en/1.10/howto/static-files/
 
 STATIC_URL = '/static/'
-
-MEDIA_URL = '/file-uploads/'
+STATICFILES_DIRS = (
+    os.path.join(BASE_DIR, 'static'),
+)
+MEDIA_URL = 'media/'
 
 # MODELS
 AUTH_USER_MODEL = 'user.User'
@@ -132,3 +144,35 @@ AWS_HEADERS = {
     'Expires': 'Thu, 15 Feb 2018 20:00:00 GMT',
     'Cache-Control': 'max-age=86400',
 }
+FILE_UPLOAD_TEMP_DIR = '/temp/'
+
+S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/sih17/'
+
+# LOGGING = {
+#     'version': 1,
+#     'disable_existing_loggers': False,
+#     'filters': {
+#         'require_debug_false': {
+#             '()': 'django.utils.log.RequireDebugFalse'
+#         }
+#     },
+#     'handlers': {
+#         'file': {
+#             'level': 'ERROR',
+#             'class': 'logging.FileHandler',
+#             'filename': '/Users/akshaysharma/Desktop/django-projects/sih17/logs/error.log',
+#         },
+#         'mail_admins': {
+#             'level': 'ERROR',
+#             'filters': ['require_debug_false'],
+#             'class': 'django.utils.log.AdminEmailHandler'
+#         }
+#     },
+#     'loggers': {
+#         'django': {
+#             'handlers': ['file', 'mail_admins'],
+#             'level': 'ERROR',
+#             'propagate': True,
+#         },
+#     },
+# }

@@ -7,15 +7,23 @@ from django.db import models
 
 
 # Create your models here.
-def change_file_name(instance, filename):
+def change_test_file_name(instance, filename):
     extension = filename.split('.')[-1]
     filename = '%s.%s' % (int(datetime.datetime.now().strftime("%s")) * 1000, extension)
-    path = 'media/analysis/'
+    path = 'file-uploads/tests/'
+    return os.path.join(path, filename)
+
+
+def change_predicted_file_name(instance, filename):
+    extension = filename.split('.')[-1]
+    filename = '%s.%s' % (int(datetime.datetime.now().strftime("%s")) * 1000, extension)
+    path = 'file-uploads/prediction/'
     return os.path.join(path, filename)
 
 
 class AnalysisTest(models.Model):
-    test_file = models.FileField(upload_to=change_file_name, verbose_name='Analysis file')
+    test_file = models.FileField(upload_to=change_test_file_name, verbose_name='Analysis file')
+    predicted_file = models.FileField(upload_to=change_predicted_file_name, verbose_name='Analysis predicted file')
 
     def __str__(self):
         return os.path.basename(self.test_file.name)
