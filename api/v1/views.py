@@ -1,9 +1,5 @@
-import os
 import uuid
 
-from django.http import HttpResponse
-from django.views.decorators.csrf import csrf_exempt
-from django.views.decorators.http import require_POST
 from rest_framework.authtoken.views import ObtainAuthToken
 from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
@@ -43,21 +39,21 @@ class TestLoginView(APIView):
         return Response({"hello": 1})
 
 
-@require_POST
-@csrf_exempt
-def analysis_post(request):
-    f = AnalysisTestForm(request.POST, request.FILES)
-    if f.is_valid():
-        file = request.FILES['test_file']
-        old_path = 'tmp/tests/%s.xlsx' % uuid.uuid4()
-        with open(old_path, 'wb+') as destination:
-            for chunk in file.chunks():
-                destination.write(chunk)
-        path = execute(old_path)
-        upload_s3.apply_async([old_path, path], queue='uploads', routing_key='s3.uploads')
-        if os.path.exists(path):
-            with open(path, 'rb') as fh:
-                response = HttpResponse(fh.read(),
-                                        content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
-                return response
+class PredictionAPIView(APIView):
+    authentication_classes = (CustomTokenAuthentication,)
+    permission_classes = (IsAuthenticated,)
+    form_class = AnalysisTestForm
+
+    def post(self, request):
+        f = self.form_class(request.POST, request.FILES)
+        if f.is_valid():
+            file = request.FILES['test_file']
+            old_path = 'tmp/tests/%s.xlsx' % uuid.uuid4()
+            with open(old_path, 'wb+') as destination:
+                for chunk in file.chunks():
+                    destination.write(chunk)
+            path = execute(old_path)
+            upload_s3.apply_async([old_path, path], queue='uploads', routing_key='s3.uploads')
+            return Response({'message': 'Predictions file has been mailed to you.'}, status=200)
+        else:
+            return Response({'error': 'File was not valid'}, status=422)
