@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-from sklearn.linear_model import Lasso
+from sklearn.linear_model import Ridge
 import pickle
 
 def convertTF(df,featureList):
@@ -159,11 +159,6 @@ def prepare(train):
     
     return X,y
 
-test  = pd.read_excel('test.xlsx', na_values=-1)
-X, y = prepare(test)
-filename = 'finalized_model.sav'
-loaded_model = pickle.load(open(filename, 'rb'))
-
 def testing(X, model, ds, file_name):
     y_pred = np.expm1(model.predict(X))
     submission = pd.DataFrame(columns=['ID','Salary'])
@@ -172,4 +167,12 @@ def testing(X, model, ds, file_name):
     writer_orig = pd.ExcelWriter(file_name, engine='xlsxwriter')
     submission.to_excel(writer_orig, index=False, sheet_name='report')
     writer_orig.save()
-testing(X, loaded_model, test, 'result4.xlsx')
+
+def execute(file_path)
+    test  = pd.read_excel(file_path, na_values=-1)
+    X, y = prepare(test)
+    filename = 'finalized_model.sav'
+    loaded_model = pickle.load(open(filename, 'rb'))
+    testing(X, loaded_model, test, 'result4.xlsx')
+
+
