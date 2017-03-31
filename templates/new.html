@@ -1,4 +1,3 @@
-{% load static %}
 <!DOCTYPE html>
 <html lang="">
 <head>
@@ -90,7 +89,7 @@
                     <div class="to-hide">
                         <input id="id_test_file" name="test_file" type="file" required="">
                         <input type="submit" value="Submit" class="ul-submit">
-                        <img src="{% static 'images/load.gif' %}" class="load-icon hidden">
+                        <img src="img/load.gif" class="load-icon hidden">
                     </div>
                     <span class="hidden ul-success animated fadeIn">
   							<span class="success-text">Upload Complete. An email with the results has been sent to aviralgupta2004@gmail.com</span>
@@ -183,25 +182,44 @@
 <!-- /#wrapper -->
 <script src="https://code.jquery.com/jquery-2.2.4.min.js"
         integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
-<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}" defer></script>
+<script type="text/javascript" src="js/bootstrap.min.js" defer></script>
 <script src="https://cdn.plot.ly/plotly-latest.min.js" defer></script>
 <script type="text/javascript" src="{% static 'predictions/predajax.js' %}"></script>
-<script type="text/javascript" src="{% static 'js/animate.js' %}" defer></script>
+<script type="text/javascript" src="js/animate.js" defer></script>
 <script type="text/javascript">
-    function init() {
-        var a = $(".hamburger"), c = $(".overlay"), b = !1;
-        a.click(function () {
-            1 == b ? (c.hide(), a.removeClass("is-open"), a.addClass("is-closed"), b = !1) : (c.show(), a.removeClass("is-closed"), a.addClass("is-open"), b = !0);
+    $(document).ready(function () {
+        var trigger = $('.hamburger'),
+            overlay = $('.overlay'),
+            isClosed = false;
+
+        trigger.click(function () {
+            hamburger_cross();
         });
+
         window.scrollTo(0, 0);
+
         animateControl.init();
+
+
+        function hamburger_cross() {
+
+            if (isClosed == true) {
+                overlay.hide();
+                trigger.removeClass('is-open');
+                trigger.addClass('is-closed');
+                isClosed = false;
+            } else {
+                overlay.show();
+                trigger.removeClass('is-closed');
+                trigger.addClass('is-open');
+                isClosed = true;
+            }
+        }
+
         $('[data-toggle="offcanvas"]').click(function () {
-            $("#wrapper").toggleClass("toggled");
+            $('#wrapper').toggleClass('toggled');
         });
-        post_file.init();
-    }
-    ;
-    window.addEventListener('load', init);
+    });
 </script>
 </body>
 </html>

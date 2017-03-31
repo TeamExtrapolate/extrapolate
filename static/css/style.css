@@ -4,6 +4,10 @@
 	width: 100%;
 }
 
+label{
+    display:none;
+}
+
 body {
 	font-family: 'Raleway', sans-serif;
 }
@@ -23,7 +27,7 @@ body {
 }
 
 .dash-heading {
-	font-size: 22px;
+	font-size: 25px;
 	margin: 0;
 	padding: 20px;
 	color: #8c9eac;
@@ -37,35 +41,63 @@ body {
 }
 
 .file-area {
-  height: 217px;
+  height: 100%;
   background-color: white;
   padding: 30px;
+  padding-bottom: 25px;
 }
 
 .file-head {
   margin-top: 0;
+  font-size: 21px;
+  font-weight: 600;
 }
 input[type=file] {
   display: inline-block;
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 17px;
+  margin-top: 4px;
   margin-bottom: 10px;
 }
 input[type=submit] {
   border: none;
   outline: none;
-  width: 150px;
-  padding: 10px;
-  font-size: 17px;
+  width: 140px;
+  padding: 7px;
+  font-size: 16px;
   border-radius: 3px;
   background-color: #60a9ce;
   color: white;
   margin-top: 5px;
+  font-weight: 600;
+}
+.load-icon {
+  height: 20px;
+  width: 20px;
+  margin-left: 20px;
+}
+.success-text {
+  font-size: 18px;
+  font-weight: 600;
+}
+.success-icon {
+  color: rgba(43,128,0,0.86);
+  font-size: 20px;
+  margin-left: 5px;
+  font-size: 23px;
+}
+.fail-text {
+  margin-right: 5px;
+  font-size: 15px;
+  font-weight: 600;
+}
+.fail-icon {
+  color: #d53426;
+  font-size: 20px;
 }
 .dash-element {
 	height: 425px;
 	background-color: inherit;
-	margin-top: 3%;
+	margin-top: 4%;
   padding-left: 0px;
   padding-right: 0px;
   -webkit-box-orient: vertical;
@@ -181,7 +213,6 @@ html { height: 100%;}
       -moz-transition:  width .2s ease-in;
        -ms-transition:  width .2s ease-in;
             transition: width .2s ease-in;
-
 }
 
 .sidebar-nav li:nth-child(1):before {
@@ -431,7 +462,7 @@ html { height: 100%;}
   border-radius: 5px;
   background-color: white;
 }
-.dash-desc {
+.dash-desc, .dash-desc-center {
   height: 100%;
   background-color: white;
   margin-top: 3%;
@@ -449,6 +480,7 @@ html { height: 100%;}
 .dash-desc-p {
   color: #8c9eac;
   margin: 0;
+  font-size: 18px;
 }
 .aml {
   visibility: hidden;
@@ -471,4 +503,23 @@ html { height: 100%;}
 }
 .dash-element.dash-alone {
   margin-left: 33.33333333%;
+}
+.dash-desc::before {
+  content: '';
+  position: absolute;
+  top: 16px;
+  right: 100%;
+  height: 0;
+  width: 0;
+  border: 7px solid transparent;
+  border-right: 7px solid white;
+}
+@media only screen and (min-width: 1170px) {
+  .dash-desc:before {
+    top: 24px;
+    left: auto;
+    right: 100%;
+    border-color: transparent;
+    border-right-color: white;
+  }
 }

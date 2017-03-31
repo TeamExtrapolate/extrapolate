@@ -67,8 +67,8 @@ ROOT_URLCONF = 'SIH17.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'templates/'), ],
-        'APP_DIRS': False,
+        'DIRS': [os.path.join(BASE_DIR, 'templates'), ],
+        'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
                 'django.template.context_processors.debug',
@@ -150,9 +150,9 @@ S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/sih17/'
 
 # EMAIL SETTINGS
 EMAIL_USE_TLS = True
-EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST = os.environ.get('SIH17_EMAIL_HOST', '')
 EMAIL_HOST_USER = 'smartindiahackathon2k17@gmail.com'
-EMAIL_HOST_PASSWORD = 'akshay_smart2017'
+EMAIL_HOST_PASSWORD = os.environ.get('SIH17_HOST_PASSWORD', '')
 EMAIL_PORT = 587
 
 # LOGGING = {

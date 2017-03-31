@@ -1,7 +1,7 @@
 import os
 import uuid
 
-from django.http import HttpResponse
+from django.http import HttpResponse, JsonResponse
 from django.views.generic.edit import FormView
 
 from analysis.forms import AnalysisTestForm
@@ -27,3 +27,8 @@ class PredictionsView(FormView):
                                         content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
                 response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
                 return response
+
+    def form_invalid(self, form):
+        return JsonResponse(data={'error': form.errors}, status=422)
+
+
