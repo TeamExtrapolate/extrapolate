@@ -148,6 +148,13 @@ FILE_UPLOAD_TEMP_DIR = '/temp/'
 
 S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/sih17/'
 
+# EMAIL SETTINGS
+EMAIL_USE_TLS = True
+EMAIL_HOST = 'smtp.gmail.com'
+EMAIL_HOST_USER = 'smartindiahackathon2k17@gmail.com'
+EMAIL_HOST_PASSWORD = 'akshay_smart2017'
+EMAIL_PORT = 587
+
 # LOGGING = {
 #     'version': 1,
 #     'disable_existing_loggers': False,
