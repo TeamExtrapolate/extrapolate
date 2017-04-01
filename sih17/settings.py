@@ -33,7 +33,7 @@ BROKER_URL = 'amqp://guest:**@127.0.0.1:5672//'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
+ALLOWED_HOSTS = ['*']
 
 # Application definition
 
@@ -89,8 +89,12 @@ WSGI_APPLICATION = 'sih17.wsgi.application'
 
 DATABASES = {
     'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': os.path.join(BASE_DIR, 'db.sqlite3'),
+        'ENGINE': 'django.db.backends.postgresql_psycopg2',
+        'NAME': 'sih17',
+        'USER': 'sih17_admin',
+        'PASSWORD': 'sih17winners',
+        'HOST': 'localhost',
+        'PORT': '',
     }
 }
 
