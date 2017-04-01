@@ -1,6 +1,6 @@
 import os
 import uuid
-from django.shortcuts import redirect
+from django.shortcuts import redirect, render
 from django.conf import settings
 from django.http import HttpResponse, JsonResponse
 from django.views.generic.edit import FormView
@@ -18,6 +18,7 @@ from django.contrib.sites.shortcuts import get_current_site
 from .decorators import ajax_login_required, redirect_predictions
 from django.contrib.auth.decorators import login_required
 from user.forms import UserCreateForm
+
 from django.contrib.auth import (
     REDIRECT_FIELD_NAME, login as auth_login,
     logout as auth_logout, update_session_auth_hash,
@@ -118,6 +119,11 @@ class LoginView(SuccessURLAllowedHostsMixin, FormView):
 def logout(request):
     auth_logout(request)
     return redirect('login')
+
+
+@login_required
+def demographics(request):
+    return render(request, 'demographics.html')
 
 
 class PredictionsView(FormView):
