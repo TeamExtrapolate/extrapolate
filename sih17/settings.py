@@ -154,10 +154,12 @@ AWS_HEADERS = {
 S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/sih17/'
 
 # EMAIL SETTINGS
-EMAIL_HOST = os.environ.get('SIH17_EMAIL_HOST', '')
-EMAIL_HOST_USER = 'smartindiahackathon2k17@gmail.com'
-EMAIL_HOST_PASSWORD = 'akshay_smart2017'
+EMAIL_HOST = 'smtp.mailgun.org'
+EMAIL_HOST_USER = 'postmaster@sandbox04e6697575564da688240d24ebe6ffae.mailgun.org'
+EMAIL_HOST_PASSWORD = 'f7730e3d72debe4de4ae59ed8fb56189'
 EMAIL_PORT = 587
+MAIL_GUN_API_ENDPOINT= 'https://api.mailgun.net/v3/sandbox04e6697575564da688240d24ebe6ffae.mailgun.org'
+API_KEY = "key-87139e58eb07af03f220efab29a83889"
 EMAIL_USE_TLS = True
 LOGGING = {
     'version': 1,

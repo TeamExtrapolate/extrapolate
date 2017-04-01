@@ -157,3 +157,8 @@ class PredictionsView(FormView):
 
     def form_invalid(self, form):
         return JsonResponse(data={'error': form.errors}, status=422)
+
+
+
+def pipeline(request):
+    pass
