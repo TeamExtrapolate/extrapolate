@@ -8,12 +8,13 @@ var post_file = (function () {
 
     function failCall() {
         $('.ul-fail').removeClass("hidden");
+        $('.load-icon').addClass("hidden");
     }
 
     function submit(e) {
         e.preventDefault();
         $('.load-icon').removeClass("hidden");
-        if ($('.ul-fail').hasClass("hidden"))
+        if(!$('.ul-fail').hasClass("hidden"))
             $('.ul-fail').addClass("hidden");
         url = location.href;
         formData = new FormData(this);

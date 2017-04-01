@@ -91,14 +91,14 @@
                         <input id="id_test_file" name="test_file" type="file" required="">
                         <input type="submit" value="Submit" class="ul-submit">
                         <img src="{% static 'images/load.gif' %}" class="load-icon hidden">
+                        <span class="ul-fail hidden animated fadeIn">
+                            <span class="fail-text">Upload Failed</span>
+                        <i class="fa fa-times fail-icon" aria-hidden="true"></i>
+                    </span>
                     </div>
                     <span class="hidden ul-success animated fadeIn">
   							<span class="success-text">Upload Complete. An email with the results has been sent to aviralgupta2004@gmail.com</span>
   							<i class="fa fa-check success-icon" aria-hidden="true"></i>
-  						</span>
-                    <span class="ul-fail hidden animated fadeIn">
-  							<span class="fail-text">Upload Failed</span>
-  							<i class="fa fa-times fail-icon" aria-hidden="true"></i>
   						</span>
                 </form>
             </div>
