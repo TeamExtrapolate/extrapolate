@@ -1,0 +1,29 @@
+#intro {
+  position: absolute;
+  height: 100%;
+  z-index: 1000;
+  background-color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.intro-head {
+  color:  #1fd5ff;
+  font-size: 60px;
+  font-weight: 600;
+}
+
+.web-enter {
+  color: #fc2b5d;
+  font-size: 32px;
+  font-weight: 600;
+  padding-top: 40px;
+  cursor: pointer;
+}
+
+.web-enter:hover, .web-enter:focus {
+  color: rgba(252, 43, 93, 0.7);
+}
+

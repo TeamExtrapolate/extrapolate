@@ -4,6 +4,8 @@
     Login | Extrapolate
 {% endblock %}
 {% block css %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/animate.css' %}">
+    <link rel="stylesheet" type="text/css" href="{% static 'css/home.css' %}">
     <style>
         .abcRioButton {
             margin: 0 auto;
@@ -12,6 +14,13 @@
     </style>
 {% endblock %}
 {% block body %}
+    <div id="intro">
+        <h1 class="intro-head">
+            Welcome to 
+        </h1>
+        <img src="{% static 'images/logo/1x.png' %}">
+        <h4 class="web-enter">Click here to enter</h4>
+    </div>
     <div class="account-pages"></div>
     <div class="clearfix"></div>
     <div class="wrapper-page">
@@ -76,11 +85,20 @@
 {% block js %}
     <script type="text/javascript" src="{% static "js/modernizr.js" %}" async></script>
     <script type="text/javascript" src="{% static  'js/authentication/login.js' %}" defer></script>
+    <script type="text/javascript" src="{% static 'js/home-start.js' %}"></script>
     <script>
         $(".form-horizontal .form-group").slice(0, 3).addClass('padding-10');
-        function init() {
+        var w = $(window).width();
+        var h = $(window).height();
+        $('#intro').width(w);
+        $('#intro').height(h);
+        $(document).ready(function () {
+            start.init();
             login.init();
-        }
-        window.addEventListener('load', init);
+        });
+    </script>
+    <script>
+        
+        
     </script>
 {% endblock %}
