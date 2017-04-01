@@ -17,6 +17,7 @@ from django.shortcuts import resolve_url
 from django.contrib.sites.shortcuts import get_current_site
 from .decorators import ajax_login_required, redirect_predictions
 from django.contrib.auth.decorators import login_required
+from user.forms import UserCreateForm
 from django.contrib.auth import (
     REDIRECT_FIELD_NAME, login as auth_login,
     logout as auth_logout, update_session_auth_hash,
@@ -33,6 +34,15 @@ class SuccessURLAllowedHostsMixin:
         allowed_hosts = {self.request.get_host()}
         allowed_hosts.update(self.success_url_allowed_hosts)
         return allowed_hosts
+
+
+class SignupView(FormView):
+    form_class = UserCreateForm
+    template_name = 'authentication/signup.html'
+
+    def form_valid(self, form):
+        form.save()
+        return redirect('login')
 
 
 class LoginView(SuccessURLAllowedHostsMixin, FormView):
@@ -141,6 +151,3 @@ class PredictionsView(FormView):
 
     def form_invalid(self, form):
         return JsonResponse(data={'error': form.errors}, status=422)
-
-
-
