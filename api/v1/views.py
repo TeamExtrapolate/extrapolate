@@ -7,6 +7,7 @@ from rest_framework.views import APIView
 
 from SIH17.authentication import CustomTokenAuthentication
 from analysis.forms import AnalysisTestForm
+from user.forms import UserCreateForm
 from analysis.script import execute
 from api.tasks import upload_s3
 from auth_token.models import AuthToken
@@ -26,6 +27,16 @@ class LoginView(ObtainAuthToken):
             token.key = token_gen.generate_token()
             token.save()
         return Response({'token': token.key})
+
+
+class SignUpView(APIView):
+    def post(self, request):
+        f = UserCreateForm(request.data)
+        if f.is_valid():
+            f.save()
+            return Response({'data': 'success'}, status=201)
+        else:
+            return Response(f.errors, status=422)
 
 
 class TestLoginView(APIView):
