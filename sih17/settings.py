@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mrc937$)cvu%o^a9hcq*-_ookriis@qr!g1p)$&wd#2g2^@vxr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
 CELERY_TASK_QUEUES = (
     Queue('uploads', exchange=Exchange('uploads', type='direct'), routing_key='uploads.s3'),
@@ -33,7 +33,7 @@ BROKER_URL = 'amqp://guest:**@127.0.0.1:5672//'
 CELERY_ACCEPT_CONTENT = ['application/json']
 CELERY_TASK_SERIALIZER = 'json'
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 # Application definition
 
@@ -63,7 +63,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'SIH17.urls'
+ROOT_URLCONF = 'sih17.urls'
 
 TEMPLATES = [
     {
@@ -82,7 +82,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'SIH17.wsgi.application'
+WSGI_APPLICATION = 'sih17.wsgi.application'
 
 # Database
 # https://docs.djangoproject.com/en/1.10/ref/settings/#databases
@@ -146,7 +146,6 @@ AWS_HEADERS = {
     'Expires': 'Thu, 15 Feb 2018 20:00:00 GMT',
     'Cache-Control': 'max-age=86400',
 }
-FILE_UPLOAD_TEMP_DIR = '/temp/'
 
 S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/sih17/'
 
@@ -156,34 +155,35 @@ EMAIL_HOST_USER = 'smartindiahackathon2k17@gmail.com'
 EMAIL_HOST_PASSWORD = 'akshay_smart2017'
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
-# LOGGING = {
-#     'version': 1,
-#     'disable_existing_loggers': False,
-#     'filters': {
-#         'require_debug_false': {
-#             '()': 'django.utils.log.RequireDebugFalse'
-#         }
-#     },
-#     'handlers': {
-#         'file': {
-#             'level': 'ERROR',
-#             'class': 'logging.FileHandler',
-#             'filename': '/Users/akshaysharma/Desktop/django-projects/sih17/logs/error.log',
-#         },
-#         'mail_admins': {
-#             'level': 'ERROR',
-#             'filters': ['require_debug_false'],
-#             'class': 'django.utils.log.AdminEmailHandler'
-#         }
-#     },
-#     'loggers': {
-#         'django': {
-#             'handlers': ['file', 'mail_admins'],
-#             'level': 'ERROR',
-#             'propagate': True,
-#         },
-#     },
-# }
+LOGGING = {
+    'version': 1,
+    'disable_existing_loggers': False,
+    'filters': {
+        'require_debug_false': {
+            '()': 'django.utils.log.RequireDebugFalse'
+        }
+    },
+    'handlers': {
+        'file': {
+            'level': 'ERROR',
+            'class': 'logging.FileHandler',
+            'filename': '/Users/akshaysharma/Desktop/django-projects/sih17/logs/error.log',
+        },
+        'mail_admins': {
+            'level': 'ERROR',
+            'filters': ['require_debug_false'],
+            'class': 'django.utils.log.AdminEmailHandler'
+        }
+    },
+    'loggers': {
+        'django': {
+            'handlers': ['file', 'mail_admins'],
+            'level': 'ERROR',
+            'propagate': True,
+        },
+    },
+}
+
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 LOGIN_URL = 'login'
 LOGOUT_URL = 'logout'

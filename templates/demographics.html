@@ -1,17 +1,19 @@
 {% load static %}
 <!DOCTYPE html>
-<html lang="">
+<html lang="en">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Employment</title>
+    <title>Extrapolate | Demographics </title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
-    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    {#    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">#}
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    {#    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">#}
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
-        integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
@@ -89,43 +91,51 @@
             </div>
 
             <div class="dash-area">
-                    <!-- <div class="row">
-                        <div class="dash-element dash-alone col-sm-offset-3 col-sm-4  animated fadeInUp">
-                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~aviralgupta/2.embed?link=false" height="425" width="100%"></iframe>
-                        </div>
-                    </div> -->
-                    <div class="row">
-                        <div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
-                              <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~aviralgupta/6.embed?link=false" height="525" width="100%"></iframe>
-                        </div>
-                        <div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
-                                <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~prashasti/6.embed?link=false" height="525" width="100%"></iframe>
-                        </div>
+                <!-- <div class="row">
+                    <div class="dash-element dash-alone col-sm-offset-3 col-sm-4  animated fadeInUp">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~aviralgupta/2.embed?link=false" height="425" width="100%"></iframe>
                     </div>
-                    <div class="row">
-                        <div class="dash-element demo col-sm-offset-2 col-sm-4 aml">
-                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~raunaq/4.embed?link=false" height="525" width="100%"></iframe>
-                        </div>
-                        <div class="dash-element demo col-sm-offset-2 col-sm-4 amr">
-                            <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sominwadhwa/6.embed?link=false" height="525" width="100%"></iframe>
-                        </div>
+                </div> -->
+                <div class="row">
+                    <div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+                                src="https://plot.ly/~aviralgupta/6.embed?link=false" height="525"
+                                width="100%"></iframe>
+                    </div>
+                    <div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+                                src="https://plot.ly/~prashasti/6.embed?link=false" height="525" width="100%"></iframe>
                     </div>
                 </div>
+                <div class="row">
+                    <div class="dash-element demo col-sm-offset-2 col-sm-4 aml">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+                                src="https://plot.ly/~raunaq/4.embed?link=false" height="525" width="100%"></iframe>
+                    </div>
+                    <div class="dash-element demo col-sm-offset-2 col-sm-4 amr">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+                                src="https://plot.ly/~sominwadhwa/6.embed?link=false" height="525"
+                                width="100%"></iframe>
+                    </div>
+                </div>
+            </div>
         </div>
     </div>
     <!-- /#page-content-wrapper -->
 
 </div>
 <!-- /#wrapper -->
-<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
 
 <script type="text/javascript" src="{% static 'js/animate.js' %}"></script>
 <script type="text/javascript">
     function init() {
         $('#status').fadeOut(); // will first fade out the loading animation 
-            $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website. 
-            $('body').delay(350).css({'overflow':'visible'});
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow': 'visible'});
 
         var a = $(".hamburger"), c = $(".overlay"), b = !1;
         a.click(function () {

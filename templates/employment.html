@@ -8,7 +8,8 @@
     <title>Employment</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700" rel="stylesheet">
     <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://code.jquery.com/jquery-2.2.4.min.js"
             integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
@@ -112,10 +113,12 @@
             <div class="dash-area">
                 <div class="row">
                     <div class="dash-element col-sm-offset-2 col-sm-4 animated fadeInUp">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~raunaq/7.embed?link=false" height="425" width="100%"></iframe>
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+                                src="https://plot.ly/~raunaq/7.embed?link=false" height="425" width="100%"></iframe>
                     </div>
                     <div class="col-sm-offset-1 col-sm-5 dash-desc animated fadeInUp">
-                        <p class="dash-desc-p">Approved intake is roughly two times the actual intake, across all categories.</p>
+                        <p class="dash-desc-p">Approved intake is roughly two times the actual intake, across all
+                            categories.</p>
                     </div>
                 </div>
                 <div class="row">
@@ -169,18 +172,18 @@
                     </div>
                 </div>
                 <div class="row">
-{#                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">#}
-{#                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"#}
-{#                                src="https://plot.ly/~prashasti/2.embed?link=false" height="425" width="100%"></iframe>#}
-{#                    </div>#}
-                  <!--  <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
-                        <p class="dash-desc-p">For a specified designation, Software Engineer in this case, the set of
-                            values of salaires lying between (Q3 + 1.5IQR) and (Q1 - 1.5IQR) were considered to exclude
-                            the outliers. The mean of these values was computed and treated as a benchmark. Individuals
-                            receiving salaries less than this mean were said to be underemployed.<br><br>As a result, it
-                            was observed that <span class="p-bold"> nearly 51% of all Software Engineers are UNDEREMPLOYED.</span>
-                        </p>
-                    </div> -->
+                    {#                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">#}
+                    {#                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"#}
+                    {#                                src="https://plot.ly/~prashasti/2.embed?link=false" height="425" width="100%"></iframe>#}
+                    {#                    </div>#}
+                    <!--  <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
+                          <p class="dash-desc-p">For a specified designation, Software Engineer in this case, the set of
+                              values of salaires lying between (Q3 + 1.5IQR) and (Q1 - 1.5IQR) were considered to exclude
+                              the outliers. The mean of these values was computed and treated as a benchmark. Individuals
+                              receiving salaries less than this mean were said to be underemployed.<br><br>As a result, it
+                              was observed that <span class="p-bold"> nearly 51% of all Software Engineers are UNDEREMPLOYED.</span>
+                          </p>
+                      </div> -->
                 </div>
             </div>
         </div>
@@ -189,7 +192,9 @@
 
 </div>
 <!-- /#wrapper -->
-<script type="text/javascript" src="{% static 'js/bootstrap.min.js' %}"></script>
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
 
 <script type="text/javascript" src="{% static 'predictions/predajax.js' %}"></script>
 <script type="text/javascript" src="{% static 'js/animate.js' %}"></script>

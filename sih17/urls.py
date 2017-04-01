@@ -18,13 +18,13 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 
-from SIH17.views import PredictionsView, LoginView, logout, SignupView, demographics
+from sih17.views import PredictionsView, LoginView, logout, SignupView, demographics
 
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),
                   url(r'api/', include('api.urls', namespace='api')),
                   url(r'^predictions/$', PredictionsView.as_view(), name='predictions'),
-                  url(r'^login/$', LoginView.as_view(), name='login'),
+                  url(r'^$', LoginView.as_view(), name='login'),
                   url(r'^logout/$', logout, name='logout'),
                   url(r'^signup/', SignupView.as_view(), name='signup'),
                   url(r'^demographics/$', demographics, name='demographics')

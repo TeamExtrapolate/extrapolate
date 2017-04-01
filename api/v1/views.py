@@ -5,7 +5,7 @@ from rest_framework.permissions import IsAuthenticated
 from rest_framework.response import Response
 from rest_framework.views import APIView
 
-from SIH17.authentication import CustomTokenAuthentication
+from sih17.authentication import CustomTokenAuthentication
 from analysis.forms import AnalysisTestForm
 from user.forms import UserCreateForm
 from analysis.script import execute

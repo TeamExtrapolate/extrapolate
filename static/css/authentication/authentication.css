@@ -4082,10 +4082,6 @@ ul.ColVis_collection li {
     bottom: 0
 }
 
-.pro-widget-img {
-    padding: 70px 0;
-    background: url(../images/big/bg.jpg) center right no-repeat
-}
 
 .blog-box-one {
     margin-bottom: 20px
@@ -4586,10 +4582,6 @@ ul.ColVis_collection li {
     background-color: #5fbeaa !important;
     display: inline-block;
     padding: 5px
-}
-
-.ms-container {
-    background: url(../images/multiple-arrow.png) 50% 50% no-repeat
 }
 
 .ms-container .ms-list.ms-focus {
@@ -6338,7 +6330,7 @@ button.confirm {
 }
 
 .account-pages {
-    background: url(../images/geometry.png);
+    background: url(geometry.png);
     position: absolute;
     height: 100%;
     width: 100%
