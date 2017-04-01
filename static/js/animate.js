@@ -1,4 +1,4 @@
-var animateControl = (function() {
+var animateControl = (function() { 
     var leftCoords = [];
     var scroll;
     var j=0;
@@ -22,13 +22,22 @@ var animateControl = (function() {
             j++;
         }
     }
+    function rotateLogo() {
+        if($(".small-logo").hasClass("rotate-45-final")) {
+            $(".small-logo").removeClass("rotate-45-final");
+        }
+        else {
+            $(".small-logo").addClass("rotate-45-final");   
+        }
+    }
 
 
     function init() {
         yCoords();
         $(document).scroll(scrollAnimate);
+        $(".small-logo").click(rotateLogo);
     }
-
+    
     return {
         init : init,
     };
