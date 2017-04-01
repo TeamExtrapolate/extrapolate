@@ -18,10 +18,13 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 
-from SIH17.views import PredictionsView
+from SIH17.views import PredictionsView, LoginView, logout, SignupView
 
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),
                   url(r'api/', include('api.urls', namespace='api')),
-                  url(r'^predictions/$', PredictionsView.as_view(), name='predictions')
+                  url(r'^predictions/$', PredictionsView.as_view(), name='predictions'),
+                  url(r'^login/$', LoginView.as_view(), name='login'),
+                  url(r'^logout/$', logout, name='logout'),
+                  url(r'^signup/', SignupView.as_view(), name='signup'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

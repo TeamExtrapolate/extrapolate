@@ -1,0 +1,44 @@
+{% load static %}
+{% load cache %}
+{% autoescape on %}
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="utf-8"/>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+        <meta name="theme-color" content="#21A567">
+        <meta name="mobile-web-app-capable" content="yes"/>
+        <meta name="apple-mobile-web-app-capable" content="yes"/>
+        <title>
+            {% block title %}
+            {% endblock %}
+        </title>
+        <!-- CSS -->
+        <link rel="stylesheet" type="text/css"
+              href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.6.3/css/font-awesome.min.css">
+        <link href="{% static 'css/reset.css' %}" rel="stylesheet" type="text/css">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+              integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+              crossorigin="anonymous">
+        <link href="{% static 'css/authentication/authentication.css' %}" rel="stylesheet" type="text/css">
+        {% block css %}
+        {% endblock %}
+        <!-- CSS END -->
+    </head>
+    <body>
+    {% block body %}
+    {% endblock %}
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.4/jquery.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+    <!-- JS START -->
+    {% block  js %}
+    {% endblock %}
+    <!-- JS END -->
+    {% block endbody_scripts %}
+    {% endblock %}
+    </body>
+    </html>
+{% endautoescape %}

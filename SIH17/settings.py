@@ -54,6 +54,7 @@ INSTALLED_APPS = [
 
 MIDDLEWARE = [
     'django.middleware.security.SecurityMiddleware',
+    'whitenoise.middleware.WhiteNoiseMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
@@ -131,6 +132,7 @@ STATIC_URL = '/static/'
 STATICFILES_DIRS = (
     os.path.join(BASE_DIR, 'static'),
 )
+STATIC_ROOT = os.path.join(BASE_DIR, "staticfiles/")
 MEDIA_URL = 'media/'
 
 # MODELS
@@ -149,12 +151,11 @@ FILE_UPLOAD_TEMP_DIR = '/temp/'
 S3_BASE_URL = 'https://s3-ap-southeast-1.amazonaws.com/sih17/'
 
 # EMAIL SETTINGS
-EMAIL_USE_TLS = True
 EMAIL_HOST = os.environ.get('SIH17_EMAIL_HOST', '')
 EMAIL_HOST_USER = 'smartindiahackathon2k17@gmail.com'
-EMAIL_HOST_PASSWORD = os.environ.get('SIH17_HOST_PASSWORD', '')
+EMAIL_HOST_PASSWORD = 'akshay_smart2017'
 EMAIL_PORT = 587
-
+EMAIL_USE_TLS = True
 # LOGGING = {
 #     'version': 1,
 #     'disable_existing_loggers': False,
@@ -183,3 +184,7 @@ EMAIL_PORT = 587
 #         },
 #     },
 # }
+STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+LOGIN_URL = 'login'
+LOGOUT_URL = 'logout'
+LOGIN_REDIRECT_URL = 'predictions'
