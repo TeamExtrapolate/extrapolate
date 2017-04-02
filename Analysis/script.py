@@ -1,6 +1,5 @@
 import datetime
 import pickle
-
 import numpy as np
 import pandas as pd
 
@@ -191,7 +190,11 @@ def testing(X, model, ds, file_name):
     threshold_lower = Q1- 1.5*IQR
     salary_new = pickle.load(open('analysis/salary_std.sav', 'rb'))
     under_employed = submission[submission['Salary'] < int(salary_new.Salary.mean())].shape[0]
-    percentage = (under_employed/submission.shape[0])*100
+    percentage = None
+    if submission.shape[0] > 100:
+        percentage = (under_employed/submission.shape[0])*100
+    else:
+        percentage = "N/A"
     li = [percentage]
     writer_orig = pd.ExcelWriter(file_name, engine='xlsxwriter')
     submission.to_excel(writer_orig, index=False, sheet_name='report')
