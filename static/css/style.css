@@ -615,3 +615,7 @@ body {
   background-image: url(../images/box-plot.png);
   background-size: cover;
 }
+
+body {
+  overflow-x: hidden !important;
+}
