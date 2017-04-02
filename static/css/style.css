@@ -642,3 +642,23 @@ body {
 .row.last-rw {
   padding-bottom: 30px;
 }
+.guide-text-div {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.guide-text {
+  margin-right: 20px;
+  padding: 5px;
+  font-weight: 600;
+  color: #fc2b5d;
+}
+.file-area {
+  padding-bottom: 20px;
+}
+.guide-text:hover, .guide-text:focus {
+  text-decoration: none;
+  color: rgba(252, 43, 93, 0.7);
+}
+.fa-keyboard-o, .fa-file-excel-o {
+  margin-right: 4px;
+}
