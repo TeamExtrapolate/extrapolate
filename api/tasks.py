@@ -5,6 +5,7 @@ from django.core.files import File
 from celery.utils.log import get_task_logger
 from django.core.mail import BadHeaderError
 from django.conf import settings
+import requests
 
 logger = get_task_logger(__name__)
 from analysis.models import AnalysisTest
@@ -17,6 +18,7 @@ def upload_s3(self, test_file, predicted_file):
     try:
         test_temp = open(test_file, 'rb')
         predicted_temp = open(predicted_file, 'rb')
+        
         a = AnalysisTest(test_file=File(test_temp), predicted_file=File(predicted_temp))
         a.save()
         os.system('rm %s' % test_temp.name)
