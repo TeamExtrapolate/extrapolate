@@ -531,6 +531,9 @@ html { height: 100%;}
   box-shadow: 0 2px 0 #d7e4ed;
   border-radius: 4px;
 }
+.dash-desc-center {
+  margin-top: 5%;
+}
 .dash-desc-head {
   margin-top: 0px;
   font-size: 22px;
@@ -638,4 +641,48 @@ body {
 }
 .row.last-rw {
   padding-bottom: 30px;
+}
+.guide-text-div {
+  margin-top: 10px;
+  font-size: 15px;
+}
+.guide-text {
+  margin-right: 20px;
+  padding: 5px;
+  font-weight: 600;
+  color: #fc2b5d;
+}
+.file-area {
+  padding-bottom: 20px;
+}
+.guide-text:hover, .guide-text:focus {
+  text-decoration: none;
+  color: rgba(252, 43, 93, 0.7);
+}
+.fa-keyboard-o, .fa-file-excel-o {
+  margin-right: 4px;
+}
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content {
+  position: relative;
+  left: 43%;
+  font-weight: 700;
+}
+.footer-img-1 {
+  width: 20px;
+  height: 20px;
+}
+.footer-img-2 {
+  width: 21px;
+  height: 21px;
+  margin-left: 3px;
+  position: relative;
+  top: -2px;  
+}
+.dash-area {
+  padding-bottom: 10px;
 }

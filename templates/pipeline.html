@@ -14,9 +14,9 @@
   	
 	<title>Machine Learning Pipeline</title>
 </head>
-<body>
+<body class="animated fadeIn">
 	<div class="timeline-top">
-		<img src="{% static 'images/logo/1x.png' %}" class="timeline-logo">
+		<a href="{% url 'login' %}"><img src="{% static 'images/logo/1x.png' %}" class="timeline-logo"></a>
 		<h2 class="timeline-head">Machine Learning Pipeline</h2>
 	</div>
 
@@ -57,8 +57,6 @@
 			<div class="cd-timeline-content">
 				<h2>Feature Selection</h2>
 				<p>Attributes that were relevant for the predictive analysis were identified while others including the dependent ones were dropped. These relevant features were then checked for <span class="p-bold">heteroscedasticity and skewness.<br></span> For instance, following were the results obtained from PCA.</p>
-				<a href="#0" class="cd-read-more">Read more</a>
-				<span class="cd-date">Feb 14</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		<div class="cd-timeline-block">
@@ -137,6 +135,13 @@ Finally, we plotted a histogram to visualise the distribution of the predicted s
 	<div class="pipeline-end">
 		<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/43.embed" height="580" width="100%"></iframe>
 	</div>
+    <div class="footer">
+        <span class="footer-content">
+            &copy; 2017 Extrapolate Team 
+            <img class="footer-img-1" src="{% static 'images/logo/logo-2x.png' %}">
+            <img class="footer-img-2" src="{% static 'images/sih.png' %}">
+        </span>
+    </div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
 <script type="text/javascript">

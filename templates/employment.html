@@ -48,7 +48,7 @@
                 <a href="{% url 'predictions' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
             </li>
             <li>
-                <a href="education.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
+                <a href="{% url 'education' %}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
             </li>
             <li>
                 <a href="{% url 'demographics' %}"><i class="fa fa-globe" aria-hidden="true"></i>DEMOGRAPHICS</a>
@@ -68,9 +68,6 @@
             -->
             <li>
                 <a href="{% url 'pipeline' %}"><i class="fa fa-line-chart" aria-hidden="true"></i>ML PIPELINE</a>
-            </li>
-            <li>
-                <a href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>ABOUT US</a>
             </li>
         </ul>
     </nav>
@@ -110,6 +107,12 @@
   						<i class="fa fa-check success-icon" aria-hidden="true"></i>
   					</span>
                 </form>
+                <div class="to-hide guide-text-div">
+                        <a href="https://s3-ap-southeast-1.amazonaws.com/sih17/extrapolate/files/Guidelines+(1).pdf" class="guide-text"><i class="fa fa-keyboard-o" aria-hidden="true"></i>
+Guidelines for the Input</a>
+                        <a href="https://s3-ap-southeast-1.amazonaws.com/sih17/extrapolate/files/template.xlsx" class="guide-text"><i class="fa fa-file-excel-o" aria-hidden="true"></i>
+Template Format</a>
+                </div>
             </div>
             <div class="dash-area">
                 <div class="row">
@@ -173,11 +176,22 @@
                     </div>
                 </div>
                 <div class="row last-rw">
-                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">   
+                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">
+                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
+                                src="https://plot.ly/~dhruvkuchhal/30.embed?link=false" height="425"
+                                width="100%"></iframe>   
                     </div>
-                    <div class="col-sm-offset-2 col-sm-4 dash-desc amr">
+                    <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
                         <p class="dash-desc-p">For a specified designation, Software Engineer in this case, the set of values of salaires lying between (Q3 + 1.5IQR) and (Q1 - 1.5IQR) were considered to exclude the outliers. The mean of these values was computed and treated as a benchmark. Individuals receiving salaries less than this mean were said to be underemployed.<br><br>As a result, it was observed that <span class="p-bold"> nearly 51% of all Software Engineers are UNDEREMPLOYED.</span></p>
                     </div>
+                </div>
+                <hr>
+                <div class="footer">
+                    <span class="footer-content">
+                        &copy; 2017 Extrapolate Team 
+                        <img class="footer-img-1" src="{% static 'images/logo/logo-2x.png' %}">
+                        <img class="footer-img-2" src="{% static 'images/sih.png' %}">
+                    </span>
                 </div>
             </div>
         </div>
@@ -185,6 +199,7 @@
     <!-- /#page-content-wrapper -->
 
 </div>
+
 <!-- /#wrapper -->
 <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
         integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"

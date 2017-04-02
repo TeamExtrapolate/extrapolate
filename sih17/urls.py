@@ -18,7 +18,7 @@ from django.conf.urls import url, include
 from django.conf.urls.static import static
 from django.contrib import admin
 
-from sih17.views import PredictionsView, LoginView, logout, SignupView, demographics, pipeline
+from sih17.views import PredictionsView, LoginView, logout, SignupView, demographics, pipeline, education
 
 urlpatterns = [
                   url(r'^admin/', admin.site.urls),
@@ -29,4 +29,5 @@ urlpatterns = [
                   url(r'^signup/', SignupView.as_view(), name='signup'),
                   url(r'^demographics/$', demographics, name='demographics'),
                   url(r'^pipeline', pipeline, name='pipeline'),
+                  url(r'^education/$', education, name='education')
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
