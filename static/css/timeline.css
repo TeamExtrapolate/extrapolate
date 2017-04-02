@@ -1,4 +1,4 @@
-/* --------------------------------
+/* -------------------------------- 
 
 Primary style
 
@@ -36,7 +36,7 @@ h1, h2 {
   font-weight: bold;
 }
 
-/* --------------------------------
+/* -------------------------------- 
 
 Modules - reusable parts of our design
 
@@ -54,9 +54,9 @@ Modules - reusable parts of our design
   clear: both;
 }
 
-/* --------------------------------
+/* -------------------------------- 
 
-Main components
+Main components 
 
 -------------------------------- */
 header {
@@ -351,7 +351,7 @@ header h1 {
   .cssanimations .cd-timeline-content.is-hidden {
     visibility: hidden;
   }
-  .cssanimations .cd-timeline-content:nth-child(odd).bounce-in {
+  .cssanimations .cd-timeline-content.bounce-in {
     visibility: visible;
     -webkit-animation: cd-bounce-2 0.6s;
     -moz-animation: cd-bounce-2 0.6s;
@@ -481,38 +481,20 @@ header h1 {
     transform: translateX(0);
   }
 }
-
-.cd-timeline-content {
-  display: inline-block;
+.timeline-top {
+  background-color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
-
-.test {
-  float: right;
-  left: -2.5%;
-  margin-top: 20%;
+.timeline-logo {
+  height: 150px;
 }
-
-.test:before {
-    top: 24px;
-    left: auto;
-    right: 100%;
-    border-color: transparent;
-    border-right-color: white;
-}
-
-.cd-timeline-block:nth-child(even) .test {
-  float: left;
-  left: 2.5%;
-}
-
-.cd-timeline-block:nth-child(even) .test:before {
-    top: 24px;
-    left: 100%;
-    border-color: transparent;
-    border-left-color: white;
-}
-
-.plot {
-   padding: 5px;
-   padding-bottom: 10px;
+.timeline-head {
+  padding-bottom: 20px;
+  font-size: 28px;
+}.p-bold {
+  font-weight: 600;
+  color: black;
 }
