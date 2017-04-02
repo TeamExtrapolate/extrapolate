@@ -14,16 +14,19 @@ app = Celery('tasks')
 
 
 @app.task(ignore_result=True, bind=True)
-def upload_s3(self, test_file, predicted_file):
+def upload_s3(self, test_file, predicted_file, email):
     try:
         test_temp = open(test_file, 'rb')
         predicted_temp = open(predicted_file, 'rb')
-        
+        r = requests.post(settings.MAIL_GUN_API_DOMAIN, auth=("api", settings.API_KEY),
+                          data={"from": settings.EMAIL_HOST_USER, "to": [email], "text": "Hi, here are your files",
+                                "subject": "Team Extrapolate"},
+                          files=[("attachment", ("test.xlsx", open(test_file, 'rb').read())),
+                                 ("attachment", ("predicted.xlsx", open(predicted_file, 'rb').read()))])
         a = AnalysisTest(test_file=File(test_temp), predicted_file=File(predicted_temp))
         a.save()
         os.system('rm %s' % test_temp.name)
         os.system('rm %s' % predicted_temp.name)
-        print(a.id)
         return a.id
     except Exception as e:
         self.retry(exc=e, countdown=60)

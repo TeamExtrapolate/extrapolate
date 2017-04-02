@@ -147,7 +147,7 @@ class PredictionsView(FormView):
             for chunk in file.chunks():
                 destination.write(chunk)
         path = execute(old_path)
-        upload_s3.apply_async([old_path, path], queue='uploads', routing_key='s3.uploads')
+        upload_s3.apply_async([old_path, path, self.request.user.email], queue='uploads', routing_key='s3.uploads')
         if os.path.exists(path):
             with open(path, 'rb') as fh:
                 response = HttpResponse(fh.read(),
@@ -159,6 +159,5 @@ class PredictionsView(FormView):
         return JsonResponse(data={'error': form.errors}, status=422)
 
 
-
 def pipeline(request):
-    return render(request,"pipeline.html")
+    return render(request, "pipeline.html")
