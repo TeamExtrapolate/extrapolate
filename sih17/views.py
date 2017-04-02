@@ -165,3 +165,7 @@ class PredictionsView(FormView):
 
 def pipeline(request):
     return render(request, "pipeline.html")
+
+
+def education(request):
+    return render(request, "education.html")
