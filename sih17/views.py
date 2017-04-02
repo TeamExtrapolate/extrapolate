@@ -9,6 +9,7 @@ from analysis.forms import AnalysisTestForm
 from analysis.script import execute
 from django.utils.decorators import method_decorator
 from api.tasks import upload_s3
+from django.views.decorators.csrf import csrf_exempt
 from django.shortcuts import resolve_url
 from django.utils.http import is_safe_url
 from django.http import HttpResponseRedirect
@@ -134,7 +135,7 @@ class PredictionsView(FormView):
     form_class = AnalysisTestForm
 
     @method_decorator(sensitive_post_parameters())
-    @method_decorator(csrf_protect)
+    @method_decorator(csrf_exempt)
     @method_decorator(login_required())
     @method_decorator(ajax_login_required)
     def dispatch(self, request, *args, **kwargs):

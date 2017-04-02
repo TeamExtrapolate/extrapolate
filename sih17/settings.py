@@ -24,7 +24,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'mrc937$)cvu%o^a9hcq*-_ookriis@qr!g1p)$&wd#2g2^@vxr'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 CELERY_TASK_QUEUES = (
     Queue('uploads', exchange=Exchange('uploads', type='direct'), routing_key='uploads.s3'),

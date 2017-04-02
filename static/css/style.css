@@ -612,6 +612,6 @@ body {
 }
 
 .box-plot {
-  background-image: url("../images/box-plot.png");
+  background-image: url(../images/box-plot.png);
   background-size: cover;
 }
