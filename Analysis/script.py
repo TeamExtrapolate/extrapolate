@@ -184,9 +184,20 @@ def testing(X, model, ds, file_name):
     submission = pd.DataFrame(columns=['ID', 'Salary'])
     submission.ID = ds.ID
     submission.Salary = y_pred
+    Q1 = submission['Salary'].quantile(0.25)
+    Q3 = submission['Salary'].quantile(0.75)
+    IQR = Q3 - Q1
+    threshold_upper = Q3 + 1.5*IQR
+    threshold_lower = Q1- 1.5*IQR
+    salary_new = pickle.load(open('analysis/salary_std.sav', 'rb'))
+    under_employed = submission[submission['Salary'] < int(salary_new.Salary.mean())].shape[0]
+    percentage = (under_employed/submission.shape[0])*100
+    li = [IQR, threshold_upper, threshold_lower, submission.Salary.mean(),percentage]
     writer_orig = pd.ExcelWriter(file_name, engine='xlsxwriter')
     submission.to_excel(writer_orig, index=False, sheet_name='report')
     writer_orig.save()
+    return li
+
 
 
 def execute(file_path):
@@ -195,5 +206,6 @@ def execute(file_path):
     filename = 'analysis/IKDD_Dataset/finalized_model.sav'
     loaded_model = pickle.load(open(filename, 'rb'))
     path = 'tmp/predictions/result-%s.xlsx' % (int(datetime.datetime.now().strftime("%s")) * 1000)
-    testing(X, loaded_model, test, path)
-    return path
+    data = testing(X, loaded_model, test, path)
+    data.append(path)
+    return data

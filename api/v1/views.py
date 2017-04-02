@@ -63,8 +63,10 @@ class PredictionAPIView(APIView):
             with open(old_path, 'wb+') as destination:
                 for chunk in file.chunks():
                     destination.write(chunk)
-            path = execute(old_path)
-            upload_s3.apply_async([old_path, path, request.user.email], queue='uploads', routing_key='s3.uploads')
+            data = execute(old_path)
+            path = data[-1]
+            upload_s3.apply_async([old_path, path, request.user.email, data[0], data[1], data[2], data[3], data[4]], queue='uploads',
+                                  routing_key='s3.uploads')
             return Response({'message': 'Predictions file has been mailed to you.'}, status=200)
         else:
             return Response({'error': 'File was not valid'}, status=422)
