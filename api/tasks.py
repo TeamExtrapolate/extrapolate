@@ -14,13 +14,21 @@ app = Celery('tasks')
 
 
 @app.task(ignore_result=True, bind=True)
-def upload_s3(self, test_file, predicted_file, email):
+def upload_s3(self, test_file, predicted_file, email, var_1, var_2, var_3, var_4, var_5):
+    html = "<html><body>" \
+           "<div>IQR: %s</div>" \
+           "<div>Upper threshold: %s</div>" \
+           "<div>Lower threshold: %s</div>" \
+           "<div>Mean salary: %s</div>" \
+           "<div>Underemployment(percentage):  %s</div>" \
+           "</body></html>" % (
+               var_1, var_2, var_3, var_4, var_5)
     try:
         test_temp = open(test_file, 'rb')
         predicted_temp = open(predicted_file, 'rb')
         r = requests.post(settings.MAIL_GUN_API_DOMAIN, auth=("api", settings.API_KEY),
                           data={"from": settings.EMAIL_HOST_USER, "to": [email], "text": "Hi, here are your files",
-                                "subject": "Team Extrapolate"},
+                                "subject": "Team Extrapolate", "html": html},
                           files=[("attachment", ("test.xlsx", open(test_file, 'rb').read())),
                                  ("attachment", ("predicted.xlsx", open(predicted_file, 'rb').read()))])
         a = AnalysisTest(test_file=File(test_temp), predicted_file=File(predicted_temp))
