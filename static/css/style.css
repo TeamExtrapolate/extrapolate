@@ -611,3 +611,7 @@ body {
     transform: rotate(45deg);
 }
 
+.box-plot {
+  background-image: url("../images/box-plot.png");
+  background-size: cover;
+}
