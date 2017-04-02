@@ -1,0 +1,139 @@
+{% load static %}
+<!doctype html>
+<html lang="en" class="no-js">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+
+	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+
+	<link rel="stylesheet" href="{% static 'css/reset.css' %}"> <!-- CSS reset -->
+	<link rel="stylesheet" href="{% static 'css/timeline.css' %}"> <!-- Resource style -->
+	<script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
+  	
+	<title>Machine Learning Pipeline</title>
+</head>
+<body>
+	<div class="timeline-top">
+		<img src="{% static 'images/logo/1x.png' %}" class="timeline-logo">
+		<h2 class="timeline-head">Machine Learning Pipeline</h2>
+	</div>
+
+	<section id="cd-timeline" class="cd-container">
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-picture">
+				<img src="img/cd-icon-picture.svg" alt="Picture">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Data Accumulation</h2>
+				<p>Based on the problem and our interpretation of it, we collated data for our solution from the following sources:<br><br>1. AICTE<br>2. Educational Census<br>3. IKDD (Academic) Data</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Preprocessing</h2>
+				<p>Preprocessing involves transforming raw data into a usable format. </p><p>Example: We had to adjust the skewness of the predictor variable, salary, by <span class="p-bold"> logarithmic standardization</span> of the values since skewed data can have ruinous consequences for our predictive model.</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~raunaq/9.embed?link=false" height="500" width="100%"></iframe>
+			</div> <!-- cd-timeline-content -->
+		</div>
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Feature Selection</h2>
+				<p>Attributes that were relevant for the predictive analysis were identified while others including the dependent ones were dropped. These relevant features were then checked for <span class="p-bold">heteroscedasticity and skewness</span>.</p>
+				<a href="#0" class="cd-read-more">Read more</a>
+				<span class="cd-date">Feb 14</span>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sominwadhwa/4.embed?link=false" height="500" width="100%"></iframe>
+			</div> <!-- cd-timeline-content -->
+		</div>
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Model Building/Selection</h2>
+				<p>Data Split: <span class="p-bold">80:20</span> :: Training:Cross Validation</p><p>The following models were considered (regressors):</p>
+1. SVM<br>2. Random Forest<br>3. Ridge Regression<br>4. Lasso Regression<br>5. Artificial Neural Network(MLP)<br><p>Comparing the results based on the RMSE of the above models (CV): </p><p>Since the lowest value of the RMSE was observed for Ridge Regression, it was selected and hyper-parameter tuned (GridSearchCV with 3-Fold Cross Validation to determine the best possible values of its parameters) to integrate with the backend working of the API.</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+		
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+			<div class="cd-timeline-content">
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sharmaakshay/2.embed?link=false" height="500" width="100%"></iframe>
+			</div> <!-- cd-timeline-content -->
+		</div>
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+<!-- Table plot -->
+			<div class="cd-timeline-content plot">
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/24.embed?link=false" height="500" width="100%"></iframe>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>Model Application</h2>
+				<p>The model was applied to a sample testing dataset (completely unused) and correspondingly the salaries were predicted. 
+Finally, we plotted a histogram to visualise the distribution of the predicted salaries to ascertain whether the distribution was similar to that of the training set salaries. As a result, the machine learning methodology was validated since the distribution was visibly similar.
+</p>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-location">
+				<img src="img/cd-icon-location.svg" alt="Location">
+			</div> <!-- cd-timeline-img -->
+<!-- Table plot -->
+			<div class="cd-timeline-content plot">
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/41.embed?link=false" height="500" width="100%"></iframe>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+
+		<div class="cd-timeline-block">
+			<div class="cd-timeline-img cd-movie">
+				<img src="img/cd-icon-movie.svg" alt="Movie">
+			</div> <!-- cd-timeline-img -->
+
+			<div class="cd-timeline-content">
+				<h2>The End</h2>
+			</div> <!-- cd-timeline-content -->
+		</div> <!-- cd-timeline-block -->
+	</section> <!-- cd-timeline -->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
+<script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+</body>
+</html>

@@ -28,5 +28,5 @@ urlpatterns = [
                   url(r'^logout/$', logout, name='logout'),
                   url(r'^signup/', SignupView.as_view(), name='signup'),
                   url(r'^demographics/$', demographics, name='demographics'),
-                  url(r'^pipeling', pipeline, name='pipeline'),
+                  url(r'^pipeline', pipeline, name='pipeline'),
               ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

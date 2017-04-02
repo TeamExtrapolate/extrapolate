@@ -161,4 +161,4 @@ class PredictionsView(FormView):
 
 
 def pipeline(request):
-    pass
+    return render(request,"pipeline.html")
