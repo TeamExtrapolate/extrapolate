@@ -192,7 +192,7 @@ def testing(X, model, ds, file_name):
     salary_new = pickle.load(open('analysis/salary_std.sav', 'rb'))
     under_employed = submission[submission['Salary'] < int(salary_new.Salary.mean())].shape[0]
     percentage = (under_employed/submission.shape[0])*100
-    li = [IQR, threshold_upper, threshold_lower, submission.Salary.mean(),percentage]
+    li = [percentage]
     writer_orig = pd.ExcelWriter(file_name, engine='xlsxwriter')
     submission.to_excel(writer_orig, index=False, sheet_name='report')
     writer_orig.save()

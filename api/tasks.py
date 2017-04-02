@@ -14,15 +14,10 @@ app = Celery('tasks')
 
 
 @app.task(ignore_result=True, bind=True)
-def upload_s3(self, test_file, predicted_file, email, var_1, var_2, var_3, var_4, var_5):
+def upload_s3(self, test_file, predicted_file, email, var_5):
     html = "<html><body>" \
-           "<div>IQR: %s</div>" \
-           "<div>Upper threshold: %s</div>" \
-           "<div>Lower threshold: %s</div>" \
-           "<div>Mean salary: %s</div>" \
-           "<div>Underemployment(percentage):  %s</div>" \
-           "</body></html>" % (
-               var_1, var_2, var_3, var_4, var_5)
+           "<div>Under-Employment (in percent) observed in the submitted file based on national average is :  %s</div>" \
+           "</body></html>" % var_5
     try:
         test_temp = open(test_file, 'rb')
         predicted_temp = open(predicted_file, 'rb')
