@@ -619,3 +619,20 @@ body {
 body {
   overflow-x: hidden !important;
 }
+.logout-btn {
+  position: relative;
+  font-size: 22px;
+  left: 91%;
+  top: 15px;
+  padding: 10px;
+  cursor: pointer;
+  font-weight: 600;
+  color: #fdfdfd;
+}
+.logout-btn > a {
+  color: #fdfdfd;
+}
+.logout-btn > a:hover, .logout-btn > a:focus {
+  text-decoration: none;
+  color: rgba(253, 253, 253, 0.8);
+}
