@@ -662,3 +662,27 @@ body {
 .fa-keyboard-o, .fa-file-excel-o {
   margin-right: 4px;
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.footer-content {
+  position: relative;
+  left: 43%;
+  font-weight: 700;
+}
+.footer-img-1 {
+  width: 20px;
+  height: 20px;
+}
+.footer-img-2 {
+  width: 21px;
+  height: 21px;
+  margin-left: 3px;
+  position: relative;
+  top: -2px;  
+}
+.dash-area {
+  padding-bottom: 10px;
+}

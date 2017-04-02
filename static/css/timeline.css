@@ -518,3 +518,28 @@ header h1 {
   left: 11px;
   color: white;
 }
+.footer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+.footer-content {
+  position: absolute;
+  margin-top: 10px;
+  left: 43%;
+  font-weight: 700;
+  color: black;
+  padding-bottom: 10px;
+}
+.footer-img-1 {
+  width: 20px;
+  height: 20px;
+}
+.footer-img-2 {
+  width: 21px;
+  height: 21px;
+  margin-left: 3px;
+  position: relative;
+  top: -2px;  
+}
