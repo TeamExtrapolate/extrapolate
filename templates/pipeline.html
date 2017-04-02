@@ -5,9 +5,10 @@
 	<meta charset="UTF-8">
 	<meta name="viewport" content="width=device-width, initial-scale=1">
 
-	<link href='http://fonts.googleapis.com/css?family=Droid+Serif|Open+Sans:400,700' rel='stylesheet' type='text/css'>
+	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700" rel="stylesheet">
 	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
 	<link rel="stylesheet" href="{% static 'css/reset.css' %}"> <!-- CSS reset -->
+	<link rel="stylesheet" href="{% static 'css/animate.css' %}"> 
 	<link rel="stylesheet" href="{% static 'css/timeline.css' %}"> <!-- Resource style -->
 	<script src="{% static 'js/modernizr.js' %}"></script> <!-- Modernizr -->
   	
@@ -22,7 +23,7 @@
 	<section id="cd-timeline" class="cd-container">
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-picture">
-				<img src="img/cd-icon-picture.svg" alt="Picture">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -32,7 +33,7 @@
 		</div> <!-- cd-timeline-block -->
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -41,49 +42,49 @@
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
+			<div class="cd-timeline-img cd-location">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~raunaq/9.embed?link=false" height="500" width="100%"></iframe>
 			</div> <!-- cd-timeline-content -->
 		</div>
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
+			<div class="cd-timeline-img cd-picture">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<h2>Feature Selection</h2>
-				<p>Attributes that were relevant for the predictive analysis were identified while others including the dependent ones were dropped. These relevant features were then checked for <span class="p-bold">heteroscedasticity and skewness</span>.</p>
+				<p>Attributes that were relevant for the predictive analysis were identified while others including the dependent ones were dropped. These relevant features were then checked for <span class="p-bold">heteroscedasticity and skewness.<br></span> For instance, following were the results obtained from PCA.</p>
 				<a href="#0" class="cd-read-more">Read more</a>
 				<span class="cd-date">Feb 14</span>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
-				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sominwadhwa/4.embed?link=false" height="500" width="100%"></iframe>
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sharmaakshay/6.embed" height="500" width="100%"></iframe>
 			</div> <!-- cd-timeline-content -->
 		</div>
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
 				<h2>Model Building/Selection</h2>
 				<p>Data Split: <span class="p-bold">80:20</span> :: Training:Cross Validation</p><p>The following models were considered (regressors):</p>
-1. SVM<br>2. Random Forest<br>3. Ridge Regression<br>4. Lasso Regression<br>5. Artificial Neural Network(MLP)<br><p>Comparing the results based on the RMSE of the above models (CV): </p><p>Since the lowest value of the RMSE was observed for Ridge Regression, it was selected and hyper-parameter tuned (GridSearchCV with 3-Fold Cross Validation to determine the best possible values of its parameters) to integrate with the backend working of the API.</p>
+1. SVM<br>2. Random Forest<br>3. Ridge Regression<br>4. Lasso Regression<br>5. Artificial Neural Network(MLP)<br><p>The RMSE values for each model are shown below.</p><p>Since the lowest value of the RMSE was observed for Ridge Regression, it was selected and hyper-parameter tuned (GridSearchCV with 3-Fold Cross Validation to determine the best possible values of its parameters) to integrate with the backend working of the API.</p>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 		
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
+			<div class="cd-timeline-img cd-picture">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 			<div class="cd-timeline-content">
 				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sharmaakshay/2.embed?link=false" height="500" width="100%"></iframe>
@@ -91,18 +92,18 @@
 		</div>
 
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="cd-timeline-img cd-movie">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 <!-- Table plot -->
 			<div class="cd-timeline-content plot">
-				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/24.embed?link=false" height="500" width="100%"></iframe>
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/46.embed?link=false" height="235" width="100%"></iframe>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -114,18 +115,18 @@ Finally, we plotted a histogram to visualise the distribution of the predicted s
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
-			<div class="cd-timeline-img cd-location">
-				<img src="img/cd-icon-location.svg" alt="Location">
+			<div class="cd-timeline-img cd-picture">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 <!-- Table plot -->
 			<div class="cd-timeline-content plot">
-				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/41.embed?link=false" height="500" width="100%"></iframe>
+				<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/41.embed" height="500" width="100%"></iframe>
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 
 		<div class="cd-timeline-block">
 			<div class="cd-timeline-img cd-movie">
-				<img src="img/cd-icon-movie.svg" alt="Movie">
+				<i class="fa fa-wpexplorer elements-logo" aria-hidden="true"></i>
 			</div> <!-- cd-timeline-img -->
 
 			<div class="cd-timeline-content">
@@ -133,7 +134,24 @@ Finally, we plotted a histogram to visualise the distribution of the predicted s
 			</div> <!-- cd-timeline-content -->
 		</div> <!-- cd-timeline-block -->
 	</section> <!-- cd-timeline -->
+	<div class="pipeline-end">
+		<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/43.embed" height="580" width="100%"></iframe>
+	</div>
 <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.0/jquery.min.js"></script>
 <script src="{% static 'js/main.js' %}"></script> <!-- Resource jQuery -->
+<script type="text/javascript">
+	$(document).ready(function () {
+		var element = $(".pipeline-end");
+		var temp = element[0].getBoundingClientRect().top;
+		var scroll = window.scrollY;
+		function scrollAction() {
+			if(scroll >= temp) {
+				$(".pipeline-end").addClass("animated");
+				$(".pipeline-end").addClass("fadeIn");
+			}	
+		}
+		$(document).scroll(scrollAction);
+	});
+</script>
 </body>
 </html>

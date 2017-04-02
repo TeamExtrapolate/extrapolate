@@ -494,7 +494,27 @@ header h1 {
 .timeline-head {
   padding-bottom: 20px;
   font-size: 28px;
-}.p-bold {
+}
+.p-bold {
   font-weight: 600;
   color: black;
+}
+.pipeline-end {
+  margin-left: 10%;
+  margin-right: 10%;
+  width: 80%;
+  height: 600px;
+  display: block;
+  background-color: white;
+  padding: 16px;
+  box-shadow: 0 3px 0 #d7e4ed;
+  border-radius: 5px;
+  margin-bottom: 30px;
+}
+.elements-logo {
+  position: absolute;
+  font-size: 38px;
+  top: 11px;
+  left: 11px;
+  color: white;
 }
