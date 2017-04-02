@@ -531,6 +531,9 @@ html { height: 100%;}
   box-shadow: 0 2px 0 #d7e4ed;
   border-radius: 4px;
 }
+.dash-desc-center {
+  margin-top: 5%;
+}
 .dash-desc-head {
   margin-top: 0px;
   font-size: 22px;

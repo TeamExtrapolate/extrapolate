@@ -16,7 +16,7 @@ var animateControl = (function() {
         if(j==leftCoords.length) {
             console.log("p");
         }
-        else if(scroll >= (leftCoords[j]-500)) {
+        else if(scroll >= (leftCoords[j]-550)) {
             $('.aml')[j].className += " aml-visible animated fadeInLeft";
             $('.amr')[j].className += " amr-visible animated fadeInRight";
             j++;
