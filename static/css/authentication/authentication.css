@@ -9,9 +9,10 @@
 }
 
 .btn-green, .btn-green:hover, .btn:hover, .btn {
-    background-color: #21A567 !important;
-    border: 1px #21A567 !important;
-    color: white !important;
+    background-color: rgba(252, 43, 93, 0.7);
+    border: 1px rgba(252, 43, 93, 0.7);
+}
+    color: white;
 }
 
 .hide {
@@ -6718,4 +6719,32 @@ div.hopscotch-bubble .hopscotch-bubble-arrow-container.down .hopscotch-bubble-ar
 
 .padding-10 {
     padding: 0 10px
+}
+
+h3.text-center {
+    font-family: 'Raleway', sans-serif;
+    position: relative;
+    z-index: 1;
+}
+img.brand-logo {
+    width: 167px;
+    position: relative;
+    left: -13px;
+    top: -3px;
+    z-index: -1;
+}
+.btn, .btn-green  {
+    background-color: #fc2b5d !important;
+    border: 1px #fc2b5d !important;
+    color: #fff !important;
+    font-weight: 800;
+}
+.btn-green:hover, .btn:hover {
+    background-color: rgba(252, 43, 93, 0.7) !important;
+}
+.checkbox label {
+    font-family: 'Raleway', sans-serif;
+}
+.text-primary > b {
+    color: #1fd5ff;
 }
