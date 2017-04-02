@@ -101,13 +101,13 @@
                         <img src="{% static 'images/load.gif' %}" class="load-icon hidden">
                         <span class="ul-fail hidden animated fadeIn">
                             <span class="fail-text">Upload Failed</span>
-                        <i class="fa fa-times fail-icon" aria-hidden="true"></i>
-                    </span>
+                            <i class="fa fa-times fail-icon" aria-hidden="true"></i>
+                        </span>
                     </div>
                     <span class="hidden ul-success animated fadeIn">
-  							<span class="success-text">Upload Complete. An email with the results will be sent to {{ request.user.email }}</span>
-  							<i class="fa fa-check success-icon" aria-hidden="true"></i>
-  						</span>
+  						<span class="success-text">Upload Complete. An email with the results will be sent to {{ request.user.email }}</span>
+  						<i class="fa fa-check success-icon" aria-hidden="true"></i>
+  					</span>
                 </form>
             </div>
             <div class="dash-area">
@@ -175,7 +175,7 @@
                     <div class="dash-element emp col-sm-offset-2 col-sm-4 aml">
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/30.embed?link=false" height="525" width="100%"></iframe>
                     </div>
-                    <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
+                    <div class="col-sm-offset-2 col-sm-4 dash-desc amr">
                         <p class="dash-desc-p">For a specified designation, Software Engineer in this case, the set of values of salaires lying between (Q3 + 1.5IQR) and (Q1 - 1.5IQR) were considered to exclude the outliers. The mean of these values was computed and treated as a benchmark. Individuals receiving salaries less than this mean were said to be underemployed.<br><br>As a result, it was observed that <span class="p-bold"> nearly 51% of all Software Engineers are UNDEREMPLOYED.</span></p>
                     </div>
                 </div>
