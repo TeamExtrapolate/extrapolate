@@ -181,7 +181,7 @@ LOGGING = {
         'file': {
             'level': 'ERROR',
             'class': 'logging.FileHandler',
-            'filename': '/home/akshay/sih17/logs/error.log',
+            'filename': '/var/sih17/logs/error.log',
         },
         'mail_admins': {
             'level': 'ERROR',
