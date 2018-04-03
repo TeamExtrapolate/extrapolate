@@ -136,7 +136,6 @@ class PredictionsView(FormView):
 
     @method_decorator(sensitive_post_parameters())
     @method_decorator(csrf_exempt)
-    @method_decorator(login_required())
     @method_decorator(ajax_login_required)
     def dispatch(self, request, *args, **kwargs):
         return super().dispatch(request, *args, **kwargs)
