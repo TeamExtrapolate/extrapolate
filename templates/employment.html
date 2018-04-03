@@ -80,14 +80,14 @@
         </button>
         <div>
             <div class="page-start">
-                <span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span>
+             <!--   <span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span> -->
             </div>
 
             <div class="dash-top">
                 <h4 class="dash-heading">Understanding High Skilled Labour Market in India</h4>
             </div>
 
-            <div class="file-area animated fadeIn">
+         <!--   <div class="file-area animated fadeIn">
                 <div class="to-hide">
                     <h2 class="file-head">Upload your file for prediction (*.xls or .xlsx)</h2>
                 </div>
@@ -113,30 +113,19 @@ Guidelines for the Input</a>
                         <a href="https://s3-ap-southeast-1.amazonaws.com/sih17/extrapolate/files/template.xlsx" class="guide-text"><i class="fa fa-file-excel-o" aria-hidden="true"></i>
 Template Format</a>
                 </div>
-            </div>
+            </div> -->
             <div class="dash-area">
                 <div class="row">
-                    <div class="dash-element col-sm-offset-2 col-sm-4 animated fadeInUp">
+                    <div class="dash-element col-sm-offset-1 col-sm-10 animated fadeInUp">
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
                                 src="https://plot.ly/~raunaq/7.embed?link=false" height="425" width="100%"></iframe>
                     </div>
-                    <div class="col-sm-offset-1 col-sm-5 dash-desc animated fadeInUp">
+                    <div class="dash-desc-center col-sm-offset-3 col-sm-6 animated fadeInUp">
                         <p class="dash-desc-p">Approved intake is roughly two times the actual intake, across all
                             categories.</p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~prashasti/0.embed?link=false" height="425" width="100%"></iframe>
-                    </div>
-                    <div class="dash-element col-sm-offset-2 col-sm-4 amr">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~aviralgupta/0.embed?link=false" height="425"
-                                width="100%"></iframe>
-                    </div>
-                </div>
-                <div class="row">
+                <div class="row last-rw">
                     <div class="dash-element col-sm-offset-2 col-sm-4 aml">
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
                                 src="https://plot.ly/~raunaq/0.embed?link=false" height="425" width="100%"></iframe>
@@ -152,45 +141,11 @@ Template Format</a>
                         </p>
                     </div>
                 </div>
-                <div class="row">
-                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~sominwadhwa/0.embed?link=false" height="425"
-                                width="100%"></iframe>
-                    </div>
-                    <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
-                        <p class="dash-desc-p">Most of the salary is accumulated<span class="p-bold"> around 3 to 5 LPA region,</span>
-                            which is the average salary obtained by Indian (engineering) candidates. Few outliers are
-                            present above 10 LPA.</p>
-                    </div>
-                </div>
-                <div class="row">
-                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~sharmaakshay/0.embed?link=false" height="425"
-                                width="100%"></iframe>
-                    </div>
-                    <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
-                        <p class="dash-desc-p">Contrary to the popular notion, there is <span class="p-bold">little correlation between College GPA & the salary offered.</span>
-                        </p>
-                    </div>
-                </div>
-                <div class="row last-rw">
-                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~dhruvkuchhal/30.embed?link=false" height="425"
-                                width="100%"></iframe>   
-                    </div>
-                    <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
-                        <p class="dash-desc-p">For a specified designation, Software Engineer in this case, the set of values of salaires lying between (Q3 + 1.5IQR) and (Q1 - 1.5IQR) were considered to exclude the outliers. The mean of these values was computed and treated as a benchmark. Individuals receiving salaries less than this mean were said to be underemployed.<br><br>As a result, it was observed that <span class="p-bold"> nearly 51% of all Software Engineers are UNDEREMPLOYED.</span></p>
-                    </div>
-                </div>
                 <hr>
                 <div class="footer">
                     <span class="footer-content">
-                        &copy; 2017 Extrapolate Team 
+                        &copy; 2018 AICTE 
                         <img class="footer-img-1" src="{% static 'images/logo/logo-2x.png' %}">
-                        <img class="footer-img-2" src="{% static 'images/sih.png' %}">
                     </span>
                 </div>
             </div>

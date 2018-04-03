@@ -48,7 +48,7 @@ body {
 
 .page-start {
   height: 64px;
-  background-color: #17a9a8;
+  background-color: #f75700e6;
   position: fixed;
   margin-top: -64px;
   z-index: 50;
@@ -66,6 +66,9 @@ body {
   padding: 20px;
   color: #8c9eac;
   font-weight: 600;
+  position: fixed;
+  z-index: 98;
+  background-color: #fdfdfd;
 }
 
 .dash-area {
@@ -215,7 +218,7 @@ html { height: 100%;}
     margin-left: -220px;
     overflow-y: auto;
     overflow-x: hidden;
-    background: #333244;
+    background: #333;
     -webkit-transition: all 0.5s ease;
     -moz-transition: all 0.5s ease;
     -o-transition: all 0.5s ease;
@@ -267,7 +270,7 @@ html { height: 100%;}
     z-index: 1;
     height: 100%;
     width: 3px;
-    background-color: #333244;
+    background-color: #333;
     -webkit-transition: width .2s ease-in;
       -moz-transition:  width .2s ease-in;
        -ms-transition:  width .2s ease-in;
@@ -275,18 +278,18 @@ html { height: 100%;}
 }
 
 .sidebar-nav li:nth-child(1):before {
-  background-color: #22b7b5;
+  background-color: #f75700e6;
 }
 
 .sidebar-nav li:nth-child(n):hover:before,
 .sidebar-nav li:nth-child(n).active:before,
 .sidebar-nav li:nth-child(n):focus:before {
-    background-color: #22b7b5;
+    background-color: #f75700e6;
 }
 .sidebar-nav li:nth-child(n):hover,
 .sidebar-nav li:nth-child(n).active,
 .sidebar-nav li:nth-child(n):focus {
-    background-color: #2a2939;
+    background-color: #f75700e6;
     -webkit-transition: width .4s ease-in;
       -moz-transition:  width .4s ease-in;
        -ms-transition:  width .4s ease-in;
@@ -502,7 +505,7 @@ html { height: 100%;}
 }
 
 .sidebar-nav li:first-child a {
-  background-color: #23b7b7;
+  background-color: rgba(249, 85, 2, 0.7);
   height: 64px;
   padding: 10px 15px 10px 30px;
   padding-left: 33px;
