@@ -47,6 +47,10 @@ class SignupView(FormView):
         return redirect('login')
 
 
+def login(request):
+    return redirect('predictions')
+
+
 class LoginView(SuccessURLAllowedHostsMixin, FormView):
     """
     Display the login form and handle the login action.
