@@ -168,3 +168,7 @@ def pipeline(request):
 
 def education(request):
     return render(request, "education.html")
+
+def team(request):
+    return render(request, "team.html")
+
