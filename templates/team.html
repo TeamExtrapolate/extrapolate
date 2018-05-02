@@ -5,7 +5,7 @@
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>Employment | Extrapolate</title>
+    <title>Team | Extrapolate</title>
     <link href="https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700" rel="stylesheet">
     <!-- Bootstrap CSS -->
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
@@ -16,6 +16,8 @@
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <link rel="stylesheet" href="{% static 'css/animate.css' %}">
     <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/team.css' %}">
+
     <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
     <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
     <!--[if lt IE 9]>
@@ -69,6 +71,9 @@
             <li>
                 <a href="{% url 'pipeline' %}"><i class="fa fa-line-chart" aria-hidden="true"></i>ML PIPELINE</a>
             </li>
+            <li>
+                <a href="{% url 'team' %}"><i class="fa fa-users" aria-hidden="true"></i>ABOUT US</a>
+            </li>
         </ul>
     </nav>
     <!-- /#sidebar-wrapper -->
@@ -84,7 +89,7 @@
             </div>
 
             <div class="dash-top">
-                <h4 class="dash-heading">Understanding High Skilled Labour Market in India</h4>
+                <h4 class="dash-heading">Meet the Team</h4>
             </div>
 
          <!--   <div class="file-area animated fadeIn">
@@ -115,32 +120,92 @@ Template Format</a>
                 </div>
             </div> -->
             <div class="dash-area">
-                <div class="row">
-                    <div class="dash-element col-sm-offset-1 col-sm-10 animated fadeInUp">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~raunaq/7.embed?link=false" height="425" width="100%"></iframe>
+                <div class="row-cards">
+                  <div class="column">
+                  </div>
+                  <div class="column">
+                    <div class="card animated bounceInUp">
+                      <img class="profile-img" src="{% static 'images/ss.jpg' %}" alt="Jane">
+                      <div class="container">
+                        <h2 class="name">Dr. N.H. Siddalingaswamy</h2>
+                        <p class="title">Mentor &amp; Director (e-Gov & CMAT- GPAT)</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      </div>
                     </div>
-                    <div class="dash-desc-center col-sm-offset-3 col-sm-6 animated fadeInUp">
-                        <p class="dash-desc-p">Approved intake is roughly two times the actual intake, across all
-                            categories.</p>
-                    </div>
+                  </div>
+                  <div class="column">
+                  </div>
                 </div>
-                <div class="row last-rw">
-                    <div class="dash-element col-sm-offset-2 col-sm-4 aml">
-                        <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~raunaq/0.embed?link=false" height="425" width="100%"></iframe>
+                <div class="row-cards">  
+                  <div class="column">
+                    <div class="card animated bounceInUp">
+                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <div class="container">
+                        <h2>Jane Doe</h2>
+                        <p class="title">CEO &amp; Founder</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      </div>
                     </div>
-                    <div class="col-sm-offset-1 col-sm-5 dash-desc amr">
-                        <p class="dash-desc-p">The dataset contained a field of College Tier where aptitude score
-                            annotated each college with a score of 1 and 2. The annotations have been computed from the
-                            average scores obtained by the students in the college/university as well as the institute's
-                            reputation. Colleges with an average score above a threshold are tagged as 1 and others as
-                            2. College City Tier is annotated based on the population of the city in which the college
-                            is located.<br><br>In our observation,<span class="p-bold"> Tier 1 college candidates have secured more salary on an average than Tier 2 college,</span>
-                            which coincides with the general trend, whereas the <span class=”p-bold”>college city tier does not affect salary greatly.</span>
-                        </p>
+                  </div>
+
+                  <div class="column">
+                    <div class="card animated bounceInUp">
+                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <div class="container">
+                        <h2>Jane Doe</h2>
+                        <p class="title">CEO &amp; Founder</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      </div>
                     </div>
+                  </div>
+
+                  <div class="column">
+                    <div class="card animated bounceInUp">
+                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <div class="container">
+                        <h2>Jane Doe</h2>
+                        <p class="title">CEO &amp; Founder</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      </div>
+                    </div>
+                  </div>
                 </div>
+
+                <div class="row-cards">  
+                  <div class="column">
+                    <div class="card animated bounceInUp">
+                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <div class="container">
+                        <h2>Jane Doe</h2>
+                        <p class="title">CEO &amp; Founder</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="column">
+                    <div class="card animated bounceInUp">
+                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <div class="container">
+                        <h2>Jane Doe</h2>
+                        <p class="title">CEO &amp; Founder</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      </div>
+                    </div>
+                  </div>
+
+                  <div class="column">
+                    <div class="card animated bounceInUp">
+                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <div class="container">
+                        <h2>Jane Doe</h2>
+                        <p class="title">CEO &amp; Founder</p>
+                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
                 <hr>
                 <div class="footer">
                     <span class="footer-content">

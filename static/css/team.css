@@ -1,0 +1,78 @@
+/* Three columns side by side */
+
+.dash-area {
+    width: 100%;
+}
+
+.row-cards {
+    padding-top: 50px;
+    display: flex;
+    justify-content: space-around;
+}
+
+.column {
+    margin-bottom: 16px;
+    padding: 0 50px;
+}
+
+.profile-img { 
+    width: 310px;
+    height: 250px;
+}
+
+/* Display the columns below each other instead of side by side on small screens */
+@media screen and (max-width: 650px) {
+    .column {
+        width: 100%;
+        display: block;
+    }
+}
+
+/* Add some shadows to create a card effect */
+.card {
+    display: block;
+    width: 310px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card:hover {
+      box-shadow: 0 0 20px 0 rgba(0,0,0,.12);
+}
+
+.name {
+    font-size: 19px;
+}
+
+.title {
+    width: 100%;
+    position: relative; 
+    word-break: break-all;
+    font-size: 15px;
+}
+
+/* Some left and right padding inside the container */
+.container {
+    padding: 0 16px;
+}
+
+
+
+.title {
+    color: grey;
+}
+
+.button {
+    border: none;
+    outline: 0;
+    display: inline-block;
+    padding: 8px;
+    color: white;
+    background-color: #000;
+    text-align: center;
+    cursor: pointer;
+    width: 100px;
+}
+
+.button:hover {
+    background-color: #555;
+}
