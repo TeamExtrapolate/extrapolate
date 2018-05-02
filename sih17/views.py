@@ -126,7 +126,6 @@ def logout(request):
     return redirect('login')
 
 
-@login_required
 def demographics(request):
     return render(request, 'demographics.html')
 
