@@ -492,8 +492,9 @@ header h1 {
   height: 150px;
 }
 .timeline-head {
+  padding-top: 20px;
   padding-bottom: 20px;
-  font-size: 28px;
+  font-size: 40px;
 }
 .p-bold {
   font-weight: 600;
