@@ -15,8 +15,8 @@
 * Then install activate the virtual environment, using `source env/bin/activate`
 * Install the dependencies by `pip3 install -r requirements.txt`
 * [Install and configure PostgreSQL](https://github.com/sominwadhwa/extrapolate/wiki/PostGreSQL-installation), as the relational database.
-- For more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to setup the database")
-* If this the first time installation of the project, run `python3 manage.py migrate`
+* For more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to setup the database")
+* If you are configuring the project for the very first and all the database setup steps have been implemented successsfully please run the following to populate the relational db schema to the database created, type `python3 manage.py migrate`
 * To run the server `python3 manage.py runserver`
 * To deactivate the virtual environment `deactivate`
 * [Deployment instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04 "How to deploy?")
