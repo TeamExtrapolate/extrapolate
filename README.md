@@ -24,15 +24,6 @@
 * To deactivate the virtual environment `deactivate`
 * [Deployment instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to deploy?")
 
-* People:
-  - [Akshay Sharma](https://github.com/akshaysharma096 "Akshay Sharma")
-  - [Aviral Gupta](https://github.com/avi1310 "Aviral Gupta")
-  - [Dhruv Kucchal](https://github.com/dhruvkuchhal, "Dhruv Kucchal")
-  - [Prashasti Gupta](https://www.linkedin.com/in/prashasti-gupta-996593b9/, "Prashasti Gupta")
-  - [Raunaq Jain](https://github.com/raunaqjain "Raunaq Jain")
-  - [Somin Wadhwa](https://github.com/sominwadhwa "Somin Wadhwa")
-
-
 ### Contact ###
 
 * For queries, you can reach us out at: [`extrapolate@googlegroups.com`](maitlo:extrapolate@googlegroups.com)
