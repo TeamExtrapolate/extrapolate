@@ -35,4 +35,4 @@
 
 ### Contact ###
 
-* For queries, you can reach us out at: [`extrapolate@googlegroups.com`](maitlo:extrapolate@googlegroups.com)
+* For queries, you can reach us out at: [extrapolate@googlegroups.com](maitlo:extrapolate@googlegroups.com)
