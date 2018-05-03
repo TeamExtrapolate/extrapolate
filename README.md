@@ -19,7 +19,7 @@
    - Create user: `sih17_admin`
    - Create db: `sih17`
    - Add password to db: `sih17winners`
-   - For more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-14-04)
+   - For more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to setup the database")
 * If this the first time installation of the project, run `python3 manage.py migrate`
 * To run the server `python3 manage.py runserver`
 * To deactivate the virtual environment `deactivate`
@@ -27,16 +27,9 @@
 * Dependencies
 * Database configuration.
 * How to run tests
-* Deployment instructions
-
-### Contribution guidelines ###
-* Always work in a branch.
-* Writing tests
-* Code review
-* Other guidelines
+* [Deployment instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to deploy?")
 
 ### Who do I talk to? ###
 
-* Repo owner or admin 
-* Mail at `mailbag.akshay@gmail.com`
-* Other community or team contact
+* Mail at `akshay.sharma09695@gmail.com`
+* Other community or team contact at: `extrapolate@googlegroups.com`
