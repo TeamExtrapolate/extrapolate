@@ -1,4 +1,6 @@
-# README #
+<div align="center">
+  <img src="https://4.bp.blogspot.com/-gCN_J_hrefY/WGkMWk_mitI/AAAAAAAAIWg/3TSASbVNJHIhEUgOKgREM8Ayvn918u1JQCLcB/s1600/sih2017-home.jpg"><br><br>
+</div>
 
 ### What is this repository for? ###
 
