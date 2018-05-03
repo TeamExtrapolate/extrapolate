@@ -4,8 +4,14 @@
 
 ### What is this repository for? ###
 
-* This is project for Team Extrapolate [`extrapolate@googlegroups.com`](mailto:extrapolate@googlegroups.com), [Winners Smart India Hackathon 2017](https://innovate.mygov.in/sih2017/ "Smart India Hackathon"), under Ministry of HRD, Government of India.
-* V1.0
+* This repository showcases the work done by [Team Extrapolate](mailto:extrapolate@googlegroups.com), [Winners Smart India Hackathon 2017](https://innovate.mygov.in/sih2017/ "Smart India Hackathon"), under Ministry of HRD, Government of India, for the project that was awarded to the Team, by [All India Council for Technical Education, Government of India](https://www.aicte-india.org/, "All India Council for Technical Education").
+
+* The Team consists of 5 members:
+  - [Akshay Sharma](https://github.com/akshaysharma096, "Akshay Sharma")
+  - [Somin Wadhwa](https://github.com/sominwadhwa, "Somin Wadhwa")
+  - [Aviral Gupta](https://github.com/avi1310, "Aviral Gupta")
+  - Dhruv Kucchal
+  - [Raunaq Jain](https://github.com/raunaqjain, "Raunaq Jain")
 
 ### How do I get set up? ###
 
