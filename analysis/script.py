@@ -168,7 +168,7 @@ def prepare(train):
     # Fix GPA to 100 scale
     train['mcolgGPA'] = train.collegeGPA.apply(lambda x: gpaCal(x))
 
-    # Feature columns to take
+    # The feature columns to take
     feature_cols = ['10percentage', '12percentage', 'mcolgGPA', 'CollegeTier', 'CollegeCityTier', 'GraduationYear',
                     'scores', 'Domain', 'maxDomain', 'bigfive', 'diffGradDOB', 'isCSE', 'isIT', 'isECE', 'isMech',
                     'isICE', 'isEE']
