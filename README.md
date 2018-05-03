@@ -2,7 +2,7 @@
 
 ### What is this repository for? ###
 
-* This is project for Team Extrapolate [`extrapolate@googlegroups.com`](extrapolate@googlegroups.com), [Winners Smart India Hackathon 2017](https://innovate.mygov.in/sih2017/ "Smart India Hackathon"), under Ministry of HRD, Government of India.
+* This is project for Team Extrapolate [`extrapolate@googlegroups.com`](mailto:extrapolate@googlegroups.com), [Winners Smart India Hackathon 2017](https://innovate.mygov.in/sih2017/ "Smart India Hackathon"), under Ministry of HRD, Government of India.
 * V1.0
 
 ### How do I get set up? ###
@@ -24,7 +24,7 @@
 * [Deployment instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to deploy?")
 
 
-### Who do I talk to? ###
+### Contact ###
 
-* Mail at [`akshay.sharma09695@gmail.com`](akshay.sharma09695@gmail.com)
-* Other community or team contact at: [`extrapolate@googlegroups.com`](extrapolate@googlegroups.com)
+* Mail at [`akshay.sharma09695@gmail.com`](mailto:akshay.sharma09695@gmail.com)
+* Other community or team contact at: [`extrapolate@googlegroups.com`](maitlo:extrapolate@googlegroups.com)
