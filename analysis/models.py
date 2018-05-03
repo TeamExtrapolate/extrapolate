@@ -6,7 +6,7 @@ from django.core.exceptions import ValidationError
 from django.db import models
 
 
-# Create your models here.
+# Create your models here
 def change_test_file_name(instance, filename):
     extension = filename.split('.')[-1]
     filename = '%s.%s' % (int(datetime.datetime.now().strftime("%s")) * 1000, extension)
