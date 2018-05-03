@@ -6,13 +6,6 @@
 
 * This repository showcases the work done by [Team Extrapolate](mailto:extrapolate@googlegroups.com), [Winners Smart India Hackathon 2017](https://innovate.mygov.in/sih2017/ "Smart India Hackathon"), under Ministry of HRD, Government of India, for the project that was awarded to the Team, by [All India Council for Technical Education, Government of India](https://www.aicte-india.org/, "All India Council for Technical Education").
 
-* The Team consists of 5 members:
-  - [Akshay Sharma](https://github.com/akshaysharma096 "Akshay Sharma")
-  - [Somin Wadhwa](https://github.com/sominwadhwa "Somin Wadhwa")
-  - [Aviral Gupta](https://github.com/avi1310 "Aviral Gupta")
-  - Dhruv Kucchal
-  - [Raunaq Jain](https://github.com/raunaqjain "Raunaq Jain")
-
 ### How do I get set up? ###
 
 #### Summary of set up
@@ -30,6 +23,14 @@
 * To run the server `python3 manage.py runserver`
 * To deactivate the virtual environment `deactivate`
 * [Deployment instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to deploy?")
+
+* People:
+  - [Somin Wadhwa](https://github.com/sominwadhwa "Somin Wadhwa")
+  - [Akshay Sharma](https://github.com/akshaysharma096 "Akshay Sharma")
+  - [Aviral Gupta](https://github.com/avi1310 "Aviral Gupta")
+  - [Dhruv Kucchal](https://github.com/dhruvkuchhal)
+  - [Raunaq Jain](https://github.com/raunaqjain "Raunaq Jain")
+  - Prashasti Gupta
 
 
 ### Contact ###
