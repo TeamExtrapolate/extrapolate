@@ -10,7 +10,8 @@
 
 #### Summary of set up
 * **Always work in a virtual environment**, install virtual environment from `https://virtualenv.pypa.io/en/stable/` .
-* Download virtual environment for Python3.x .
+* Install **pip** by typing `curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py` and then typing `python3 get-pip.py`, to install **pip** for Python3.x
+* Download and install virtual environment for Python3.x, by typing `pip install virtualenv`
 * To run the project, go to the root directory of the project run `virtualenv env`
 * Then install activate the virtual environment, using `source env/bin/activate`
 * Install the dependencies by `pip3 install -r requirements.txt`
