@@ -25,6 +25,7 @@ urlpatterns = [
     url(r'api/', include('api.urls', namespace='api')),
     url(r'^$', login, name='login'),
     url(r'^logout/$', logout, name='logout'),
+    url(r'^predictions/$', PredictionsView.as_view(), name='predictions'),
     url(r'^demographics/$', demographics, name='demographics'),
     url(r'^about_us/$', pipeline, name='pipeline'),
     url(r'^education/$', education, name='education'),
