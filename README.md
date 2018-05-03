@@ -22,7 +22,7 @@
 * If this the first time installation of the project, run `python3 manage.py migrate`
 * To run the server `python3 manage.py runserver`
 * To deactivate the virtual environment `deactivate`
-* [Deployment instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to deploy?")
+* [Deployment instructions](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04 "How to deploy?")
 
 ### Contact ###
 
