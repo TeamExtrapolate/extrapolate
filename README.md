@@ -14,7 +14,7 @@
 * To run the project, go to the root directory of the project run `virtualenv env`
 * Then install activate the virtual environment, using `source env/bin/activate`
 * Install the dependencies by `pip3 install -r requirements.txt`
-* Install PostgreSQL, as the relational database.
+* [Install PostgreSQL](https://github.com/sominwadhwa/extrapolate/wiki/PostGreSQL-installation), as the relational database.
    - Create user: `sih17_admin`
    - Create db: `sih17`
    - Add password to db: `sih17winners`
