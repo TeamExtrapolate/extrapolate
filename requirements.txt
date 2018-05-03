@@ -54,7 +54,6 @@ ptyprocess==0.5.1
 Pygments==2.2.0
 pyparsing==2.2.0
 python-dateutil==2.6.0
-python-magic==0.4.13
 pytz==2016.10
 pyzmq==16.0.2
 qtconsole==4.2.1
