@@ -14,11 +14,8 @@
 * To run the project, go to the root directory of the project run `virtualenv env`
 * Then install activate the virtual environment, using `source env/bin/activate`
 * Install the dependencies by `pip3 install -r requirements.txt`
-* [Install PostgreSQL](https://github.com/sominwadhwa/extrapolate/wiki/PostGreSQL-installation), as the relational database.
-   - Create user: `sih17_admin`
-   - Create db: `sih17`
-   - Add password to db: `sih17winners`
-   - For more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to setup the database")
+* [Install and configure PostgreSQL](https://github.com/sominwadhwa/extrapolate/wiki/PostGreSQL-installation), as the relational database.
+- For more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-set-up-django-with-postgres-nginx-and-gunicorn-on-ubuntu-16-04, "How to setup the database")
 * If this the first time installation of the project, run `python3 manage.py migrate`
 * To run the server `python3 manage.py runserver`
 * To deactivate the virtual environment `deactivate`
