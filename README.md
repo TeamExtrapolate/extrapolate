@@ -28,9 +28,9 @@
   - [Somin Wadhwa](https://github.com/sominwadhwa "Somin Wadhwa")
   - [Akshay Sharma](https://github.com/akshaysharma096 "Akshay Sharma")
   - [Aviral Gupta](https://github.com/avi1310 "Aviral Gupta")
-  - [Dhruv Kucchal](https://github.com/dhruvkuchhal)
+  - [Dhruv Kucchal](https://github.com/dhruvkuchhal, "Dhruv Kucchal")
   - [Raunaq Jain](https://github.com/raunaqjain "Raunaq Jain")
-  - Prashasti Gupta
+  - [Prashasti Gupta](https://www.linkedin.com/in/prashasti-gupta-996593b9/, "Prashasti Gupta")
 
 
 ### Contact ###
