@@ -28,5 +28,4 @@
 
 ### Contact ###
 
-* Mail at [`akshay.sharma09695@gmail.com`](mailto:akshay.sharma09695@gmail.com)
-* Other community or team contact at: [`extrapolate@googlegroups.com`](maitlo:extrapolate@googlegroups.com)
+* For queries, you can reach us out at: [`extrapolate@googlegroups.com`](maitlo:extrapolate@googlegroups.com)
