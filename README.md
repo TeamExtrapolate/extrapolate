@@ -19,7 +19,7 @@
    - Create user: `sih17_admin`
    - Create db: `sih17`
    - Add password to db: `sih17winners`
-   - Fo more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-14-04)
+   - For more follow this [blog](https://www.digitalocean.com/community/tutorials/how-to-serve-django-applications-with-apache-and-mod_wsgi-on-ubuntu-14-04)
 * If this the first time installation of the project, run `python3 manage.py migrate`
 * To run the server `python3 manage.py runserver`
 * To deactivate the virtual environment `deactivate`
