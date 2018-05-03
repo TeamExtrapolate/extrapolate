@@ -21,13 +21,12 @@ from django.contrib import admin
 from sih17.views import PredictionsView, LoginView, logout, SignupView, demographics, pipeline, education, team, login
 
 urlpatterns = [
-                  url(r'^admin/', admin.site.urls),
-                  url(r'api/', include('api.urls', namespace='api')),
-                  url(r'^predictions/$', PredictionsView.as_view(), name='predictions'),
-                  url(r'^$', login, name='login'),
-                  url(r'^logout/$', logout, name='logout'),
-                  url(r'^demographics/$', demographics, name='demographics'),
-                  url(r'^about_us/$', pipeline, name='pipeline'),
-                  url(r'^education/$', education, name='education'),
-                  url(r'^team/$', team, name='team')
-              ] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)
+    url(r'^admin/', admin.site.urls),
+    url(r'api/', include('api.urls', namespace='api')),
+    url(r'^$', login, name='login'),
+    url(r'^logout/$', logout, name='logout'),
+    url(r'^demographics/$', demographics, name='demographics'),
+    url(r'^about_us/$', pipeline, name='pipeline'),
+    url(r'^education/$', education, name='education'),
+    url(r'^team/$', team, name='team')
+] + static(settings.MEDIA_URL, document_root=settings.MEDIA_ROOT)

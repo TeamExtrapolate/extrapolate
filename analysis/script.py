@@ -111,14 +111,18 @@ def prepare(train):
     train['isISC'].fillna(value=False, inplace=True)
     train['isICSE'].fillna(value=False, inplace=True)
     train['isNationalBoard'] = 0
-    train['isNationalBoard'] = train.apply(lambda x: isNationalBoard(x), axis=1)
+    train['isNationalBoard'] = train.apply(
+        lambda x: isNationalBoard(x), axis=1)
 
     # Extract Specialization
     train['isCSE'] = train.Specialization.str.contains('computer engineering')
-    train['isECE'] = train.Specialization.str.contains('electronics and communication engineering')
+    train['isECE'] = train.Specialization.str.contains(
+        'electronics and communication engineering')
     train['isIT'] = train.Specialization.str.contains('information technology')
-    train['isMech'] = train.Specialization.str.contains('mechanical engineering')
-    train['isICE'] = train.Specialization.str.contains('instrumentation and control engineering')
+    train['isMech'] = train.Specialization.str.contains(
+        'mechanical engineering')
+    train['isICE'] = train.Specialization.str.contains(
+        'instrumentation and control engineering')
     train['isEE'] = train.Specialization.str.contains('electrical engineering')
 
     train = convertTF(train, ['isCbse', 'isStateBoard', 'isISC', 'isICSE', 'isBtech', 'isMCA', 'isMtech', 'isSenior',
@@ -143,7 +147,8 @@ def prepare(train):
         ['ComputerProgramming', 'ComputerScience', 'ElectronicsAndSemicon', 'MechanicalEngg', 'ElectricalEngg',
          'TelecomEngg', 'CivilEngg']].max(axis=1)
 
-    # diffGrad : difference between Graduation Year & 12th graduation, to see whether drop in college affect scores
+    # diffGrad : difference between Graduation Year & 12th graduation, to see
+    # whether drop in college affect scores
     train['diffGrad'] = train.GraduationYear - train['12graduation']
 
     # diffGradDOB : difference between Graduation Year and DOB
@@ -186,13 +191,14 @@ def testing(X, model, ds, file_name):
     Q1 = submission['Salary'].quantile(0.25)
     Q3 = submission['Salary'].quantile(0.75)
     IQR = Q3 - Q1
-    threshold_upper = Q3 + 1.5*IQR
-    threshold_lower = Q1- 1.5*IQR
+    threshold_upper = Q3 + 1.5 * IQR
+    threshold_lower = Q1 - 1.5 * IQR
     salary_new = pickle.load(open('analysis/salary_std.sav', 'rb'))
-    under_employed = submission[submission['Salary'] < int(salary_new.Salary.mean())].shape[0]
+    under_employed = submission[submission['Salary']
+                                < int(salary_new.Salary.mean())].shape[0]
     percentage = None
     if submission.shape[0] > 100:
-        percentage = (under_employed/submission.shape[0])*100
+        percentage = (under_employed / submission.shape[0]) * 100
     else:
         percentage = "N/A"
     li = [percentage]
@@ -202,13 +208,13 @@ def testing(X, model, ds, file_name):
     return li
 
 
-
 def execute(file_path):
     test = pd.read_excel(file_path, na_values=-1)
     X, y = prepare(test)
     filename = 'analysis/IKDD_Dataset/finalized_model.sav'
     loaded_model = pickle.load(open(filename, 'rb'))
-    path = 'tmp/predictions/result-%s.xlsx' % (int(datetime.datetime.now().strftime("%s")) * 1000)
+    path = 'tmp/predictions/result-%s.xlsx' % (
+        int(datetime.datetime.now().strftime("%s")) * 1000)
     data = testing(X, loaded_model, test, path)
     data.append(path)
     return data

@@ -158,7 +158,8 @@ class PredictionsView(FormView):
             with open(path, 'rb') as fh:
                 response = HttpResponse(fh.read(),
                                         content_type="application/vnd.openxmlformats-officedocument.spreadsheetml.sheet")
-                response['Content-Disposition'] = 'inline; filename=' + os.path.basename(path)
+                response['Content-Disposition'] = 'inline; filename=' + \
+                    os.path.basename(path)
                 return response
 
     def form_invalid(self, form):
@@ -172,6 +173,6 @@ def pipeline(request):
 def education(request):
     return render(request, "education.html")
 
+
 def team(request):
     return render(request, "team.html")
-

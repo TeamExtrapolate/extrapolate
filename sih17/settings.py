@@ -27,7 +27,8 @@ SECRET_KEY = 'mrc937$)cvu%o^a9hcq*-_ookriis@qr!g1p)$&wd#2g2^@vxr'
 DEBUG = True
 
 CELERY_TASK_QUEUES = (
-    Queue('uploads', exchange=Exchange('uploads', type='direct'), routing_key='uploads.s3'),
+    Queue('uploads', exchange=Exchange(
+        'uploads', type='direct'), routing_key='uploads.s3'),
 )
 BROKER_URL = 'amqp://guest:**@127.0.0.1:5672//'
 CELERY_ACCEPT_CONTENT = ['application/json']
