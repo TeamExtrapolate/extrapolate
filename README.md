@@ -12,6 +12,20 @@ This repository showcases the work done by [Team Extrapolate](mailto:extrapolate
 
 The process entailed extracting information from the unprocessed data AICTE collects from Institutes across the country to find useful insights. The generated plots are being presented in the form of a web application.
 
+### Technical Details ###
+
+#### Abstract Architecture diagram of the project.
+<div align="center">
+  <img src="https://raw.githubusercontent.com/sominwadhwa/extrapolate/master/static/images/architecture.jpeg?token=AH6lwnRUg1gNhjA5z2cTnY8Dmns_luoKks5a9YkQwA%3D%3D"><br><br>
+</div>
+
+- The project has been architected to keep scalabilty as well as ease of development in mind.
+- [Python 3.x](https://www.python.org/ "Python3.x") is the language used in the project, because of the ranges of web as well as machine learning libraries it supports for developemnt.
+- [Django Web Framework](https://www.djangoproject.com/ "Django") has been used as the primary web framework for the project to handle HTTP/HTTPS traffic.
+- [Celery](http://www.celeryproject.org/) and [Redis](https://redis.io/) are used to support background jobs, and to keep the Django API server free of long running processes.
+- For persistent storage, [PostGreSQL](https://www.postgresql.org/ "PostGreSQL") is the primary realational database used.
+- Scientific computation libraries like [Scikit-learn](http://scikit-learn.org/stable/A), Numpy and Scipy are used to support data-science related tasks.
+
 ### How to set up this project in your local machine? ###
 
 #### Summary of set up
