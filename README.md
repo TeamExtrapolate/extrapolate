@@ -2,11 +2,17 @@
   <img src="https://4.bp.blogspot.com/-gCN_J_hrefY/WGkMWk_mitI/AAAAAAAAIWg/3TSASbVNJHIhEUgOKgREM8Ayvn918u1JQCLcB/s1600/sih2017-home.jpg"><br><br>
 </div>
 
+Smart India Hackathon, 2017, was orgarnized jointly by Ministry of Human Resource Development, All India Council for Technical Education (AICTE), Inter Institutional Inclusive Innovation Center (i4C), and Persistent Systems, as a unique initiative to identify new and disruptive digital technology innovations for solving the challenges faced by our country, India.
+
 ### What is this repository for? ###
 
-* This repository showcases the work done by [Team Extrapolate](mailto:extrapolate@googlegroups.com), [Winners Smart India Hackathon 2017](https://innovate.mygov.in/sih2017/ "Smart India Hackathon"), under the Ministry of Human Resource Development, Government of India, for the project that was awarded to the Team, by [All India Council for Technical Education, Government of India](https://www.aicte-india.org/, "All India Council for Technical Education").
+This repository showcases the work done by [Team Extrapolate](mailto:extrapolate@googlegroups.com), [Winners Smart India Hackathon 2017](https://innovate.mygov.in/sih2017/ "Smart India Hackathon"), for the project that was awarded to them by the [All India Council for Technical Education, Government of India](https://www.aicte-india.org/, "All India Council for Technical Education"), after securing the first position in Smart India Hackathon'17 under the AICTE.
 
-### How do I get set up? ###
+### Project Details ###
+
+The process entailed extracting information from the unprocessed data AICTE collects from Institutes across the country to find useful insights. The generated plots are being presented in the form of a web application.
+
+### How to set up this project in your local machine? ###
 
 #### Summary of set up
 * **Always work in a virtual environment**, install virtual environment from `https://virtualenv.pypa.io/en/stable/` .
