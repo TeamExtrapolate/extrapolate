@@ -27,7 +27,7 @@ The process entailed extracting information from the unprocessed data AICTE coll
 - [Celery](http://www.celeryproject.org/) and [Redis](https://redis.io/) are used to support background jobs, and to keep the Django API server free of long running processes.
 - For persistent storage, [PostGreSQL](https://www.postgresql.org/ "PostGreSQL") is the primary relational database used.
 - On production environment, [Gunicorn](http://docs.gunicorn.org/en/stable/index.html "Gunicorn") is used as the primary **WSGI** server for the project.
-- [Nginx](https://www.nginx.com/ "Nginx"), is used as a reverse proxy, as well as to server static content for the project.
+- [Nginx](https://www.nginx.com/ "Nginx"), is used as a reverse proxy, as well as used to serve static contenT for the project.
 
 
 
