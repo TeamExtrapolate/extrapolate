@@ -22,6 +22,7 @@ The process entailed extracting information from the unprocessed data AICTE coll
 - The project has been architected to keep scalabilty as well as ease of development in mind.
 - [Python 3.x](https://www.python.org/ "Python3.x") is the language used in the project, because of the ranges of web as well as machine learning libraries it supports for developemnt.
 - [Django Web Framework](https://www.djangoproject.com/ "Django") has been used as the primary web framework for the project to handle HTTP/HTTPS traffic.
+- The project uses HTML/CSS and JavaScript to for front-end and Plotly for visualizations.
 - [Celery](http://www.celeryproject.org/) and [Redis](https://redis.io/) are used to support background jobs, and to keep the Django API server free of long running processes.
 - For persistent storage, [PostGreSQL](https://www.postgresql.org/ "PostGreSQL") is the primary realational database used.
 - Scientific computation libraries like [Scikit-learn](http://scikit-learn.org/stable/A), Numpy and Scipy are used to support data-science related tasks.
