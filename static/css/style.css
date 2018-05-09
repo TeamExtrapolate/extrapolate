@@ -674,6 +674,10 @@ body {
 .row.last-rw {
   padding-bottom: 30px;
 }
+.row-demo {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
 .guide-text-div {
   margin-top: 10px;
   font-size: 15px;
