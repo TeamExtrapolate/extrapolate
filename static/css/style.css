@@ -74,6 +74,15 @@ body {
   z-index: 50;
 }
 
+.aicte {
+  padding-left: 60px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 16px;
+  display: block;
+}
+
 .dash-top {
   margin-top: 64px;
   height: 60px;
