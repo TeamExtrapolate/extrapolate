@@ -1,5 +1,9 @@
 /* Three columns side by side */
 
+.team-page {
+    background-color: #f9f9f9;
+}
+
 .dash-area {
     width: 100%;
 }
@@ -12,7 +16,8 @@
 
 .column {
     margin-bottom: 16px;
-    padding: 0 50px;
+    width: 310px;
+    box-sizing: border-box;
 }
 
 .profile-img { 
@@ -44,9 +49,7 @@
 }
 
 .title {
-    width: 100%;
     position: relative; 
-    word-break: break-all;
     font-size: 15px;
 }
 
@@ -58,6 +61,7 @@
 
 
 .title {
+    width: 280px;
     color: grey;
 }
 

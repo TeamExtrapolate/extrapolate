@@ -1,4 +1,4 @@
-/**
+<!--
  * Copyright 2018 Team Extrapolate Authors. All Rights Reserved.
  *
  * This source code is licensed under the MIT license found in the
@@ -17,7 +17,7 @@
  * limitations under the License.
  *
  * @emails extrapolate@googlegroups.com
- */
+ *-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="">
@@ -60,11 +60,11 @@
                     <img src="{% static 'images/logo/half.png' %}" class="brand-logo">
                 </a>
             </li>
-            <li>
+            <!--<li>
                 <a href="{% url 'login' %}"><i class="fa fa-tachometer" aria-hidden="true"></i>HOME</a>
-            </li>
+            </li>-->
             <li>
-                <a href="{% url 'predictions' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
+                <a href="{% url 'employment' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
             </li>
             <li class="active">
                 <a href="{% url 'education' %}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
@@ -102,6 +102,8 @@
         	</button>
             <div>
         		<div class="page-start">
+
+                    <span class="aicte">All India Council for Technical Education</span>
                     <!--
                 	<span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span> -->
             	</div>

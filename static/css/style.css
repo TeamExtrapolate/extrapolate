@@ -74,6 +74,15 @@ body {
   z-index: 50;
 }
 
+.aicte {
+  padding-left: 60px;
+  font-size: 25px;
+  color: #fff;
+  font-weight: 600;
+  margin-top: 16px;
+  display: block;
+}
+
 .dash-top {
   margin-top: 64px;
   height: 60px;
@@ -664,6 +673,13 @@ body {
 }
 .row.last-rw {
   padding-bottom: 30px;
+}
+.row-demo {
+  margin-bottom: 100px;
+  margin-top: 100px;
+}
+.row-emp {
+  margin-bottom: 100px;
 }
 .guide-text-div {
   margin-top: 10px;

@@ -62,7 +62,7 @@ class SignupView(FormView):
 
 
 def login(request):
-    return redirect('predictions')
+    return redirect('employment')
 
 
 class LoginView(SuccessURLAllowedHostsMixin, FormView):

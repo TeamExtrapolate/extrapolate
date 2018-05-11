@@ -1,4 +1,4 @@
-/**
+<!--
  * Copyright 2018 Team Extrapolate Authors. All Rights Reserved.
  *
  * This source code is licensed under the MIT license found in the
@@ -17,7 +17,7 @@
  * limitations under the License.
  *
  * @emails extrapolate@googlegroups.com
- */
+ *-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -63,11 +63,11 @@
                     <img src="{% static 'images/logo/half.png' %}" class="brand-logo">
                 </a>
             </li>
-            <li>
+            <!--<li>
                 <a href="{% url 'login' %}"><i class="fa fa-tachometer" aria-hidden="true"></i>HOME</a>
-            </li>
-            <li class="active">
-                <a href="{% url 'predictions' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
+            </li>-->
+            <li>
+                <a href="{% url 'employment' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
             </li>
             <li>
                 <a href="{% url 'education' %}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
@@ -91,7 +91,7 @@
             <li>
                 <a href="{% url 'pipeline' %}"><i class="fa fa-line-chart" aria-hidden="true"></i>ML PIPELINE</a>
             </li>
-            <li>
+            <li class="active">
                 <a href="{% url 'team' %}"><i class="fa fa-users" aria-hidden="true"></i>ABOUT US</a>
             </li>
         </ul>
@@ -103,8 +103,9 @@
         <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
             <img src="{% static 'images/logo/logo-2x.png' %}" class="small-logo">
         </button>
-        <div>
+        <div class="team-page">
             <div class="page-start">
+              <span class="aicte">All India Council for Technical Education</span>
              <!--   <span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span> -->
             </div>
 
@@ -149,7 +150,6 @@ Template Format</a>
                       <div class="container">
                         <h2 class="name">Dr. N.H. Siddalingaswamy</h2>
                         <p class="title">Mentor &amp; Director (e-Gov & CMAT- GPAT)</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
                       </div>
                     </div>
                   </div>
@@ -159,33 +159,31 @@ Template Format</a>
                 <div class="row-cards">  
                   <div class="column">
                     <div class="card animated bounceInUp">
-                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <img class="profile-img" src="{% static 'images/somin.jpg' %}" alt="Somin">
                       <div class="container">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO &amp; Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <h2>Somin Wadhwa</h2>
+                        <p class="title">Overall structuring &amp; management of the project. <br>Expertise- Data Science & Analytics.</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="column">
                     <div class="card animated bounceInUp">
-                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <img class="profile-img" src="{% static 'images/akshay.jpg' %}" alt="Akshay">
                       <div class="container">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO &amp; Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <h2>Akshay Sharma</h2>
+                        <p class="title">Responsible for backend &amp; testing. <br>Expertise- DevOps, Scalable Backends</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="column">
                     <div class="card animated bounceInUp">
-                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Aviral">
                       <div class="container">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO &amp; Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <h2>Aviral Gupta</h2>
+                        <p class="title">Responsible for how everything looks &amp; feels.<br>Expertise- UI/UX
+                        </p>
                       </div>
                     </div>
                   </div>
@@ -194,35 +192,23 @@ Template Format</a>
                 <div class="row-cards">  
                   <div class="column">
                     <div class="card animated bounceInUp">
-                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <img class="profile-img" src="{% static 'images/dhruv.jpg' %}" alt="Dhruv">
                       <div class="container">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO &amp; Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <h2>Dhruv Kuchhal</h2>
+                        <p class="title">Analytics driven visualizations.<br>Expertise- Analytics, Databases &amp; Security</p>
                       </div>
                     </div>
                   </div>
 
                   <div class="column">
                     <div class="card animated bounceInUp">
-                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
+                      <img class="profile-img" src="{% static 'images/raunaq.jpg' %}" alt="Raunaq">
                       <div class="container">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO &amp; Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
+                        <h2>Raunaq Jain</h2>
+                        <p class="title">Deriving meaningful inferences from raw data.<br> Expertise- Analytics &amp; Decision Sciences.</p>
                       </div>
                     </div>
                   </div>
-
-                  <div class="column">
-                    <div class="card animated bounceInUp">
-                      <img class="profile-img" src="{% static 'images/aviral.jpg' %}" alt="Jane">
-                      <div class="container">
-                        <h2>Jane Doe</h2>
-                        <p class="title">CEO &amp; Founder</p>
-                        <p>Some text that describes me lorem ipsum ipsum lorem.</p>
-                      </div>
-                    </div>
                   </div>
                 </div>
 

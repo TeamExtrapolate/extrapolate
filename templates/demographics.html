@@ -1,4 +1,4 @@
-/**
+<!--
  * Copyright 2018 Team Extrapolate Authors. All Rights Reserved.
  *
  * This source code is licensed under the MIT license found in the
@@ -17,7 +17,7 @@
  * limitations under the License.
  *
  * @emails extrapolate@googlegroups.com
- */
+ *-->
 {% load static %}
 <!DOCTYPE html>
 <html lang="en">
@@ -62,11 +62,11 @@
                     <img src="{% static 'images/logo/half.png' %}" class="brand-logo">
                 </a>
             </li>
-            <li>
+            <!--<li>
                 <a href="{% url 'login' %}"><i class="fa fa-tachometer" aria-hidden="true"></i>HOME</a>
-            </li>
+            </li>-->
             <li>
-                <a href="{% url 'predictions' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
+                <a href="{% url 'employment' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
             </li>
             <li>
                 <a href="{% url 'education' %}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
@@ -104,6 +104,7 @@
         </button>
         <div>
             <div class="page-start">
+                <span class="aicte">All India Council for Technical Education</span>
               <!--  <span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span> -->
             </div>
 
@@ -118,14 +119,16 @@
                     </div>
                 </div> -->
                 <div class="row">
-                    <div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
+                    <div class="dash-element col-sm-offset-1 col-sm-10 animated fadeInUp">
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~aviralgupta/6.embed?link=false" height="525"
+                                src="https://plot.ly/~raunaq/24.embed" height="525"
                                 width="100%"></iframe>
                     </div>
-                    <div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
+                </div>
+                <div class="row row-demo">
+                    <div class="dash-element col-sm-offset-1 col-sm-10 animated fadeInUp">
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~prashasti/6.embed?link=false" height="525" width="100%"></iframe>
+                                src="https://plot.ly/~sominwadhwa/6.embed?link=false" height="525" width="100%"></iframe>
                     </div>
                 </div>
                 <div class="row last-rw">
@@ -135,7 +138,7 @@
                     </div>
                     <div class="dash-element demo col-sm-offset-2 col-sm-4 amr">
                         <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless"
-                                src="https://plot.ly/~sominwadhwa/6.embed?link=false" height="525"
+                                src="https://plot.ly/~prashasti/6.embed?link=false" height="525"
                                 width="100%"></iframe>
                     </div>
                 </div>
