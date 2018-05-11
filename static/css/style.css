@@ -725,3 +725,6 @@ body {
 .dash-area {
   padding-bottom: 10px;
 }
+.filter {
+  height: 600px;
+}
