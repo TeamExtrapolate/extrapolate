@@ -21,6 +21,7 @@ def plot(data):
     data.target.fillna(0, inplace=True)
     data = data[['INSTI_STATE', 'target']]
     state_group = data.groupby(by='INSTI_STATE')['target'].mean()
+    state_group.sort_values(ascending=False, inplace=True)
 
     trace = go.Bar(
         x = state_group.index,
