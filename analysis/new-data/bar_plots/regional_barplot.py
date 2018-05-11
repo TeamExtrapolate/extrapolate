@@ -16,10 +16,9 @@ def plot(data):
     data['target'] = (data.NO_OF_STUDENTS_PLACED / data.X_TOTAL_STUDENTS ) * 100
     data.target.fillna(0, inplace=True)
     data = data[['INSTI_REGION', 'target']]
-    state_group = data.groupby(by='INSTI_REGION')['target'].mean()
-    state_group.sort_values(ascending=False, inplace=True)
-
     region_group = data.groupby(by='INSTI_REGION')['target'].mean()
+    region_group.sort_values(ascending=False, inplace=True)
+    
     trace = go.Bar(
         x = region_group.index,
         y = region_group
