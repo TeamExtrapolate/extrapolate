@@ -12,32 +12,19 @@ from operator import itemgetter
 
 plotly.tools.set_credentials_file(username='raunaq', api_key='y9L6p7Gkijuq8ptyjcS6')
 
-# data = data_generator(['INSTI_STATE'])
-# state_group = data.groupby(by='INSTI_STATE')['target'].mean()
-
+# DATA FORMAT = [{'STATE': state_name, 'X_TOTAL_STUDENTS': int, 'NO_OF_STUDENTS_PLACED':int}]
 def plot(data):
 
-    grouper = itemgetter("COURSE")
-    result = []
-    for key, grp in groupby(sorted(data, key=grouper), grouper):
-        temp_dict = dict(zip(["COURSE"], [key]))
-        temp_list = [item["target"] for item in grp]
-        temp_dict['target'] = sum(temp_list) / len(temp_list)
-        result.append(temp_dict)
-
-    data = sorted(result, key = itemgetter("target"), reverse=True)
-    data = data[0:20]
-
-    x = []
-    y = []
-    for item in data:
-        x = x + [item['COURSE']]
-        y = y + [item['target']]
-
+    data = pd.DataFrame(data)
+    data = data[data.X_TOTAL_STUDENTS !=0]
+    data['target'] = (data.NO_OF_STUDENTS_PLACED / data.X_TOTAL_STUDENTS ) * 100
+    data.target.fillna(0, inplace=True)
+    data = data[['INSTI_STATE', 'target']]
+    state_group = data.groupby(by='INSTI_STATE')['target'].mean()
 
     trace = go.Bar(
-        x = x,
-        y = y
+        x = state_group.index,
+        y = state_group
     )
     data = [trace]
     layout = go.Layout(
