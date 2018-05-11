@@ -1,16 +1,22 @@
 import argparse
 import pandas as pd
 import numpy as np
-import plotly
-import plotly.plotly as py
-plotly.__version__
 import cufflinks as cf
-
+import plotly.offline as py2
+import plotly.plotly as py
+import plotly.tools as tls
+import plotly.graph_objs as graph_objs
+import json
+import csv
+import math
+import plotly
 import plotly.figure_factory as ff
 from plotly.offline import download_plotlyjs, init_notebook_mode, plot,iplot
 #plotly.offline.init_notebook_mode(connected=True)
 import plotly.graph_objs as go
 
+
+plotly.tools.set_credentials_file(username='raunaq', api_key='y9L6p7Gkijuq8ptyjcS6')
 
 def main():
     # parser = argparse.ArgumentParser()
@@ -37,7 +43,8 @@ def main():
 
     print ("Distribution plot of percent of placed students in each year")
     fig = ff.create_distplot(target_value, ["2012", "2013", "2014", "2015", "2016"], show_hist=False, bin_size=0.1)
-    plot(fig, show_link = False)
+    # plot(fig, show_link = False)
+    print (tls.get_embed(py.plot(fig, filename='placed_proportion_distibution')))
 
     print ("Line plot of average number of placed students from 2012 to 2016")
     layout = dict(title = 'Average number of placed students in the years 2012 to 2016',
@@ -47,9 +54,9 @@ def main():
               height = 500
              )
 
-    fig = dict(data = [go.Scatter(y=target_value_mean, x = ["2012", "2013", "2014", "2015", "2016"]
-                              , mode = "lines+markers")], layout = layout)
-    plot(fig)
+    fig = dict(data = [go.Scatter(y=target_value_mean, x = ["2012", "2013", "2014", "2015", "2016"], mode = "lines+markers")], layout = layout)
+    # plot(fig)
+    print (tls.get_embed(py.plot(fig, filename='placed_proportion_line')))
 
 
 
