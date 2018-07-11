@@ -75,7 +75,7 @@ body {
 }
 
 .aicte {
-  padding-left: 60px;
+  padding-left: 115px;
   font-size: 25px;
   color: #fff;
   font-weight: 600;
@@ -267,7 +267,7 @@ html { height: 100%;}
 }
 
 #wrapper.toggled #page-content-wrapper {
-    position: absolute;
+    /*position: absolute; */
     margin-right: -220px;
 }
 
@@ -398,6 +398,26 @@ html { height: 100%;}
 /*       Hamburger-Cross         */
 /*-------------------------------*/
 
+.bar1, .bar2, .bar3 {
+    width: 33px;
+    height: 3px;
+    background-color: #fff;
+    margin: 6px 0;
+    transition: 0.4s;
+}
+
+.change .bar1 {
+    -webkit-transform: rotate(-45deg) translate(-9px, 6px);
+    transform: rotate(-45deg) translate(-9px, 6px);
+}
+
+.change .bar2 {opacity: 0;}
+
+.change .bar3 {
+    -webkit-transform: rotate(45deg) translate(-8px, -8px);
+    transform: rotate(45deg) translate(-8px, -8px);
+}
+
 .hamburger {
   position: fixed;
   top: 16px;
@@ -522,7 +542,7 @@ html { height: 100%;}
     right: 0;
     bottom: 0;
     background-color: rgba(250,250,250,.8);
-    z-index: 1;
+    z-index: 1; 
 }
 
 .sidebar-nav li a {
@@ -624,7 +644,22 @@ html { height: 100%;}
   top: -4px;
 }
 
+.small-logo {
+  position: fixed;
+  top: 16px;
+  display: block;
+  width: 32px;
+  height: 32px;
+  margin-left: 75px;
+  background: transparent;
+  border: none;
+}
+
 .hamburger.is-closed {
+  z-index: 98;
+}
+
+.hamburger.is-open {
   z-index: 98;
 }
 

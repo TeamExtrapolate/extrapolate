@@ -42,12 +42,12 @@ var animateControl = (function() {
             j++;
         }
     }
-    function rotateLogo() {
-        if($(".small-logo").hasClass("rotate-45-final")) {
-            $(".small-logo").removeClass("rotate-45-final");
+    function rotateHamburger() {
+        if($(".hamburger").hasClass("change")) {
+            $(".hamburger").removeClass("change");
         }
         else {
-            $(".small-logo").addClass("rotate-45-final");   
+            $(".hamburger").addClass("change");   
         }
     }
 
@@ -55,7 +55,7 @@ var animateControl = (function() {
     function init() {
         yCoords();
         $(document).scroll(scrollAnimate);
-        $(".small-logo").click(rotateLogo);
+        $(".hamburger").click(rotateHamburger);
     }
     
     return {

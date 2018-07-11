@@ -97,10 +97,15 @@
     <!-- Page Content -->
     <div id="page-content-wrapper">
         <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
-            <img src="{% static 'images/logo/logo-2x.png' %}" class="small-logo">
+            <div class="bar1"></div>
+            <div class="bar2"></div>
+            <div class="bar3"></div>
         </button>
         <div class="team-page">
             <div class="page-start">
+
+              <img src="{% static 'images/logo/logo-2x.png' %}" class="small-logo">
+
               <span class="aicte">All India Council for Technical Education</span>
              <!--   <span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span> -->
             </div>
@@ -233,6 +238,7 @@ Template Format</a>
         $('#status').fadeOut(); // will first fade out the loading animation 
         $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
         $('body').delay(350).css({'overflow': 'visible'});
+
 
         var a = $(".hamburger"), c = $(".overlay"), b = !1;
         a.click(function () {
