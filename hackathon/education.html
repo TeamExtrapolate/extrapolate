@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+    	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    	<meta name="viewport" content="width=device-width, initial-scale=1">
+    	<title>Employment</title>
+    	<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700" rel="stylesheet">
+    	<!-- Bootstrap CSS -->
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+          integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    	<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    	<script src="https://code.jquery.com/jquery-2.2.4.min.js"
+            integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+    	<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+    	<link rel="stylesheet" href="{% static 'css/animate.css' %}">
+    	<link rel="stylesheet" href="{% static 'css/style.css' %}">
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+<div id="wrapper">
+     <div class="overlay"></div>
+
+        <!-- Sidebar -->
+    <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+        <ul class="nav sidebar-nav">
+            <li class="sidebar-brand">
+                <a href="{% url 'login' %}">
+                    <img src="{% static 'images/logo/half.png' %}" class="brand-logo">
+                </a>
+            </li>
+            <li>
+                <a href="{% url 'login' %}"><i class="fa fa-tachometer" aria-hidden="true"></i>HOME</a>
+            </li>
+            <li>
+                <a href="{% url 'predictions' %}"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
+            </li>
+            <li class="active">
+                <a href="{% url 'education' %}"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
+            </li>
+            <li>
+                <a href="{% url 'demographics' %}"><i class="fa fa-globe" aria-hidden="true"></i>DEMOGRAPHICS</a>
+            </li>
+            <!--
+            <li class="dropdown">
+              <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+              <ul class="dropdown-menu" role="menu">
+                <li class="dropdown-header">Dropdown heading</li>
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li><a href="#">Separated link</a></li>
+                <li><a href="#">One more separated link</a></li>
+              </ul>
+            </li>
+            -->
+            <li>
+                <a href="{% url 'pipeline' %}"><i class="fa fa-line-chart" aria-hidden="true"></i>ML PIPELINE</a>
+            </li>
+            <li>
+                <a href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>ABOUT US</a>
+            </li>
+        </ul>
+    </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+            	<img src="{% static 'images/logo/logo-2x.png' %}" class="small-logo">
+        	</button>
+            <div>
+        		<div class="page-start">
+                	<span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span>
+            	</div>
+
+				<div class="dash-top">
+					<h4 class="dash-heading">Education in India</h4>
+				</div>
+
+				<div class="dash-area">
+					<!-- <div class="row">
+						<div class="dash-element dash-alone col-sm-offset-3 col-sm-4  animated fadeInUp">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~aviralgupta/2.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+					</div> -->
+					<div class="row">
+						<div class="dash-desc-center col-sm-offset-3 col-sm-6 animated fadeInUp">
+							  <p class="dash-desc-p">Census 2011 report named <span class="p-bold">“Provisional Population Totals, Census of India 2011 Cities having population 1 lakh and above”.</span> It contains nearly 500 yearly Indian cities with population more than 1 lac, in general the cities that will define the future of India.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="dash-element col-sm-offset-1 col-sm-10 animated fadeInUp">
+							  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~prashasti/4.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+					</div>
+					<div class="row">
+						<div class="dash-element col-sm-offset-2 col-sm-4 aml">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sominwadhwa/2.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5 dash-desc amr">
+							<p class="dash-desc-p">No strong correlation was observed</p>
+						</div>
+					</div>
+					<div class="row last-rw">
+						<div class="dash-element col-sm-offset-1 col-sm-10 animated aml">
+							  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sharmaakshay/8.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+					</div>
+					
+				</div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js"
+        integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa"
+        crossorigin="anonymous"></script>
+
+<script type="text/javascript" src="{% static 'predictions/predajax.js' %}"></script>
+<script type="text/javascript" src="{% static 'js/animate.js' %}"></script>
+<script type="text/javascript">
+    function init() {
+        $('#status').fadeOut(); // will first fade out the loading animation 
+        $('#preloader').delay(350).fadeOut('slow'); // will fade out the white DIV that covers the website.
+        $('body').delay(350).css({'overflow': 'visible'});
+
+        var a = $(".hamburger"), c = $(".overlay"), b = !1;
+        a.click(function () {
+            1 == b ? (c.hide(), a.removeClass("is-open"), a.addClass("is-closed"), b = !1) : (c.show(), a.removeClass("is-closed"), a.addClass("is-open"), b = !0);
+        });
+        window.scrollTo(0, 0);
+        animateControl.init();
+
+        $('[data-toggle="offcanvas"]').click(function () {
+            $("#wrapper").toggleClass("toggled");
+        });
+    };
+    window.addEventListener('load', init);
+</script>
+	</body>
+</html>

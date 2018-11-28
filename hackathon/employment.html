@@ -1,0 +1,212 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Employment</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script type="text/javascript" src="js/animate.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+     <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="{% url 'login' %}">
+                       <img src="Extrapolate/half.png" class="brand-logo">
+                    </a>
+                </li>
+                <li>
+                    <a href="{% url 'login' %}"><i class="fa fa-tachometer" aria-hidden="true"></i>HOME</a>
+                </li>
+                <li class="active">
+                    <a href="employment.html"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
+                </li>
+                <li>
+                    <a href="education.html"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
+                </li>
+                <li>
+                    <a href="demographics.html"><i class="fa fa-globe" aria-hidden="true"></i>DEMOGRAPHICS</a>
+                </li>
+                <!--
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                -->
+                <li>
+                    <a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>METHODOLOGY</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <img src="Extrapolate/logo-2x.png" class="small-logo">
+            </button>
+            <div>
+        		<div class="page-start">
+        			<span class="logout-btn"><a href="{% url 'logout' %}"><i class="fa fa-sign-out" aria-hidden="true"></i>Logout</a></span>
+				</div>
+
+				<div class="dash-top">
+					<h4 class="dash-heading">Understanding Highly Skilled Labour Market in India</h4>
+				</div>
+
+				<div class="file-area animated fadeIn">
+					<div class="to-hide">
+						<h2 class="file-head">Upload your file for prediction (*.xls or .xlsx)</h2>
+					</div>
+					<form action="#" id="predict-form">
+						<div class="to-hide">
+  							<input type="file" name="input-csv" accept=".xls,.xlsx">
+  							<input type="submit" value="Submit" class="ul-submit">
+  							<img src="img/load.gif" class="load-icon hidden">
+  						</div>
+  						<span class="hidden ul-success animated fadeIn">
+  							<span class="success-text">Upload Complete. An email with the results has been sent to aviralgupta2004@gmail.com</span>
+  							<i class="fa fa-check success-icon" aria-hidden="true"></i>
+  						</span>
+  						<span class="ul-fail hidden animated fadeIn">
+  							<span class="fail-text">Upload Failed</span>
+  							<i class="fa fa-times fail-icon" aria-hidden="true"></i>
+  						</span>
+					</form>
+					<div class="to-hide guide-text-div">
+						<a href="" class="guide-text"><i class="fa fa-keyboard-o" aria-hidden="true"></i>
+Guidelines for the Input</a>
+						<a href="" class="guide-text"><i class="fa fa-file-excel-o" aria-hidden="true"></i>
+Template Format</a>
+					</div>
+				</div>
+				<div class="dash-area">
+					<div class="row">
+						<div class="dash-element col-sm-offset-2 col-sm-4 animated fadeInUp">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~raunaq/7.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5 dash-desc animated fadeInUp">
+							<p class="dash-desc-p">Approved intake is roughly two times the actual intake, across all categories.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="dash-element col-sm-offset-2 col-sm-4 aml">
+							  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~prashasti/0.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+						<div class="dash-element col-sm-offset-2 col-sm-4 amr">
+								<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~aviralgupta/0.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+					</div>
+					<div class="row">
+						<div class="dash-element col-sm-offset-2 col-sm-4 aml">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~raunaq/0.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5 dash-desc amr">
+							<p class="dash-desc-p">The dataset contained a field of College Tier where aptitude score annotated each college with a score of 1 and 2. The annotations have been computed from the average scores obtained by the students in the college/university as well as the institute's reputation. Colleges with an average score above a threshold are tagged as 1 and others as 2. College City Tier is annotated based on the population of the city in which the college is located.<br><br>In our observation,<span class="p-bold"> Tier 1 college candidates have secured more salary on an average than Tier 2 college,</span> which coincides with the general trend, whereas the <span class=”p-bold”>college city tier does not affect salary greatly.</span></p>
+						</div>
+					</div>
+					<div class="row">	
+						<div class="dash-element col-sm-offset-2 col-sm-4 aml">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sominwadhwa/0.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5 dash-desc amr">
+							<p class="dash-desc-p">Most of the salary is accumulated<span class="p-bold"> around 3 to 5 LPA region,</span> which is the average salary obtained by Indian (engineering) candidates. Few outliers are present above 10 LPA.</p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="dash-element col-sm-offset-2 col-sm-4 aml">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sharmaakshay/0.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5 dash-desc amr">
+							<p class="dash-desc-p">Contrary to the popular notion, there is <span class="p-bold">little correlation between College GPA & the salary offered.</span></p>
+						</div>
+					</div>
+					<div class="row">
+						<div class="dash-element col-sm-offset-2 col-sm-4 aml">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~dhruvkuchhal/30.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+						<div class="col-sm-offset-1 col-sm-5 dash-desc amr">
+							<p class="dash-desc-p">For a specified designation, Software Engineer in this case, the set of values of salaires lying between (Q3 + 1.5IQR) and (Q1 - 1.5IQR) were considered to exclude the outliers. The mean of these values was computed and treated as a benchmark. Individuals receiving salaries less than this mean were said to be underemployed.<br><br>As a result, it was observed that <span class="p-bold"> nearly 51% of all Software Engineers are UNDEREMPLOYED.</span></p>
+						</div>
+					</div> 
+				</div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		     overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();
+		      rotateLogo();
+		    });
+		    
+		    window.scrollTo(0,0);
+
+		    animateControl.init();
+
+		    function rotateLogo() {
+        		if($(".small-logo").hasClass("rotate-45-final")) {
+            		$(".small-logo").removeClass("rotate-45-final");
+        		}
+        		else {
+            		$(".small-logo").addClass("rotate-45-final");   
+        		}
+    		}
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {
+		        overlay.hide();
+		        isClosed = false;
+		      } else {
+		        overlay.show();
+		        isClosed = true;
+		      }
+		  }
+
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });
+		});
+	</script>
+	</body>
+</html>

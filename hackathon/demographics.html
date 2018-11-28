@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="">
+	<head>
+		<meta charset="utf-8">
+		<meta http-equiv="X-UA-Compatible" content="IE=edge">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
+		<title>Demographics</title>
+		<link href="https://fonts.googleapis.com/css?family=Raleway:400,600,600i,700" rel="stylesheet">
+		<!-- Bootstrap CSS -->
+		<link rel="stylesheet" href="css/bootstrap.min.css">
+		<link rel="stylesheet" href="css/font-awesome.min.css">
+		<link rel="stylesheet" href="css/animate.css">
+		<link rel="stylesheet" href="css/style.css">
+		<script src="https://code.jquery.com/jquery-2.2.4.min.js" integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44=" crossorigin="anonymous"></script>
+		<script type="text/javascript" src="js/bootstrap.min.js"></script>
+		<script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
+		<script type="text/javascript" src="js/animate.js"></script>
+
+		<!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+		<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+		<!--[if lt IE 9]>
+			<script src="https://oss.maxcdn.com/libs/html5shiv/3.7.2/html5shiv.min.js"></script>
+			<script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+		<![endif]-->
+	</head>
+	<body>
+		<div id="wrapper">
+     <div class="overlay"></div>
+
+        <!-- Sidebar -->
+        <nav class="navbar navbar-inverse navbar-fixed-top" id="sidebar-wrapper" role="navigation">
+            <ul class="nav sidebar-nav">
+                <li class="sidebar-brand">
+                    <a href="#">
+                       SIH7
+                    </a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-tachometer" aria-hidden="true"></i>HOME</a>
+                </li>
+                <li>
+                    <a href="employment.html"><i class="fa fa-briefcase" aria-hidden="true"></i>EMPLOYMENT</a>
+                </li>
+                <li>
+                    <a href="education"><i class="fa fa-graduation-cap" aria-hidden="true"></i>EDUCATION</a>
+                </li>
+                <li class="active">
+                    <a href="demographics.html"><i class="fa fa-globe" aria-hidden="true"></i>DEMOGRAPHICS</a>
+                </li>
+                <!--
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Works <span class="caret"></span></a>
+                  <ul class="dropdown-menu" role="menu">
+                    <li class="dropdown-header">Dropdown heading</li>
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li><a href="#">Separated link</a></li>
+                    <li><a href="#">One more separated link</a></li>
+                  </ul>
+                </li>
+                -->
+                <li>
+                    <a href="#"><i class="fa fa-line-chart" aria-hidden="true"></i>METHODOLOGY</a>
+                </li>
+                <li>
+                    <a href="#"><i class="fa fa-address-card-o" aria-hidden="true"></i>ABOUT US</a>
+                </li>
+            </ul>
+        </nav>
+        <!-- /#sidebar-wrapper -->
+
+        <!-- Page Content -->
+        <div id="page-content-wrapper">
+            <button type="button" class="hamburger is-closed" data-toggle="offcanvas">
+                <span class="hamb-top"></span>
+    			<span class="hamb-middle"></span>
+				<span class="hamb-bottom"></span>
+            </button>
+            <div>
+        		<div class="page-start">
+				</div>
+
+				<div class="dash-top">
+					<h4 class="dash-heading">Demographics</h4>
+				</div>
+
+				<div class="dash-area">
+					<!-- <div class="row">
+						<div class="dash-element dash-alone col-sm-offset-3 col-sm-4  animated fadeInUp">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~aviralgupta/2.embed?link=false" height="425" width="100%"></iframe>
+						</div>
+					</div> -->
+					<div class="row">
+						<div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
+							  <iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~aviralgupta/6.embed?link=false" height="525" width="100%"></iframe>
+						</div>
+						<div class="dash-element demo col-sm-offset-2 col-sm-4 animated fadeInUp">
+								<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~prashasti/6.embed?link=false" height="525" width="100%"></iframe>
+						</div>
+					</div>
+					<div class="row">
+						<div class="dash-element demo col-sm-offset-2 col-sm-4 aml">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~raunaq/4.embed?link=false" height="525" width="100%"></iframe>
+						</div>
+						<div class="dash-element demo col-sm-offset-2 col-sm-4 amr">
+							<iframe id="igraph" scrolling="no" style="border:none;" seamless="seamless" src="https://plot.ly/~sominwadhwa/6.embed?link=false" height="525" width="100%"></iframe>
+						</div>
+					</div>
+				</div>
+            </div>
+        </div>
+        <!-- /#page-content-wrapper -->
+
+    </div>
+    <!-- /#wrapper -->
+
+
+	<script type="text/javascript">
+		$(document).ready(function () {
+		  var trigger = $('.hamburger'),
+		     overlay = $('.overlay'),
+		     isClosed = false;
+
+		    trigger.click(function () {
+		      hamburger_cross();
+		    });
+
+		    window.scrollTo(0,0);
+		    
+		    animateControl.init();
+
+		    function hamburger_cross() {
+
+		      if (isClosed == true) {
+		        overlay.hide();
+		        trigger.removeClass('is-open');
+		        trigger.addClass('is-closed');
+		        isClosed = false;
+		      } else {
+		        overlay.show();
+		        trigger.removeClass('is-closed');
+		        trigger.addClass('is-open');
+		        isClosed = true;
+		      }
+		  }
+
+		  $('[data-toggle="offcanvas"]').click(function () {
+		        $('#wrapper').toggleClass('toggled');
+		  });
+		});
+	</script>
+	</body>
+</html>
