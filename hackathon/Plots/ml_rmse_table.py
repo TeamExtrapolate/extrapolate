@@ -5,7 +5,7 @@ import plotly.tools as tls
 from plotly.graph_objs import *
 from plotly.grid_objs import Column, Grid
 import plotly.graph_objs as go
-plotly.tools.set_credentials_file(username='dhruvkuchhal', api_key='yUqN0qV3sFG4bMAfVjE1')
+plotly.tools.set_credentials_file(username='dhruvkuchhal', api_key='RDBg0usEFB6AYKwq9RDX')
 # import datetime
 # import numpy as np
 # from IPython.display import Image

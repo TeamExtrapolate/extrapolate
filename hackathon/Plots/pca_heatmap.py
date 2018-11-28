@@ -9,7 +9,7 @@ import plotly.graph_objs as go
 # import plotly.graph_objs as graph_objs
 import json
 import pickle
-plotly.tools.set_credentials_file(username='dhruvkuchhal', api_key='yUqN0qV3sFG4bMAfVjE1')
+plotly.tools.set_credentials_file(username='dhruvkuchhal', api_key='RDBg0usEFB6AYKwq9RDX')
 df = pickle.load(open('df_pca.sav', 'rb'))
 
 # print (df)

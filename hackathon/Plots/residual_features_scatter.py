@@ -6,7 +6,7 @@ import plotly.tools as tls
 import plotly.graph_objs as go
 import plotly
 import pickle
-plotly.tools.set_credentials_file(username='dhruvkuchhal', api_key='yUqN0qV3sFG4bMAfVjE1')
+plotly.tools.set_credentials_file(username='dhruvkuchhal', api_key='RDBg0usEFB6AYKwq9RDX')
 # dirname = os.path.dirname
 # path = os.path.join(os.path.dirname(os.path.dirname(os.path.abspath(__file__))), 'train.xlsx')
 # data = pd.read_excel(path)
